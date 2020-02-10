@@ -1,13 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import Container from "./Container"
+import styled, { keyframes } from "styled-components"
+import { Container } from "./Styles"
+
+const FadeIn = keyframes`
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+`
+
+const LayoutDiv = styled.div`
+  opacity: 0;
+  animation: ${FadeIn} 0.6s 0.3s ease-in-out forwards;
+`
 
 const Footer = styled.footer`
-  color: #080808;
-  padding: 0.25rem;
+  background-color: #080808;
+  color: #ffffff;
+  padding: 0.25rem 0;
   font-size: 0.7rem;
+  margin-top: 5rem;
 `
 
 const Layout = ({ children }) => {
@@ -23,12 +38,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div>
+      <LayoutDiv>
         <main>{children}</main>
         <Footer>
           <Container>Andrew Tham © {new Date().getFullYear()}</Container>
         </Footer>
-      </div>
+      </LayoutDiv>
     </>
   )
 }

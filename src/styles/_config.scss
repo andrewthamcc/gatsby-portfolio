@@ -5,3 +5,20 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #080808;
+  text-decoration: none;
+}

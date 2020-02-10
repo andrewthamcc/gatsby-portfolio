@@ -2,12 +2,19 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = () => {
+const Image = props => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      hero: file(relativePath: { eq: "hero.jps" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      contact: file(relativePath: { eq: "contact.jps" }) {
+        childImageSharp {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }

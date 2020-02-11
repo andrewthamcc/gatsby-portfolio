@@ -2,6 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { TextContainer, SectionHeading, Paragraph } from "./Styles"
 
+const SkillsSection = styled.section`
+  padding: 4rem 0 2rem;
+`
+
 const SkillList = styled.ul`
   font-weight: 600;
   color: #080808;
@@ -20,7 +24,7 @@ const SkillList = styled.ul`
 
 const Skills = () => {
   return (
-    <div>
+    <SkillsSection>
       <TextContainer>
         <SectionHeading>Skills</SectionHeading>
         <Paragraph>
@@ -44,7 +48,7 @@ const Skills = () => {
           </SkillList>
         </Paragraph>
       </TextContainer>
-    </div>
+    </SkillsSection>
   )
 }
 

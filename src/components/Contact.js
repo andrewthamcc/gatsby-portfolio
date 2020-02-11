@@ -3,30 +3,22 @@ import styled from "styled-components"
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"
 
 import { TextContainer, Container, Paragraph, SectionHeading } from "./Styles"
-import MainImage from "../images/contact.jpg"
 
-const ContactImage = styled.div`
-  background-image: url(${MainImage});
-  filter: grayscale();
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 65%;
-  height: 350px;
-
-  margin: 5rem 0 4rem;
+const ContactSection = styled.section`
+  padding-top: 4rem;
 `
 
 const ContactEmail = styled(Paragraph)`
-  font-weight: 500;
+  font-weight: 600;
   color: #080808;
   display: inline;
   transition: 0.3s border ease;
   padding-bottom: 2px;
-  border-bottom: 1.5px solid #080808;
+  border-bottom: 2px solid #080808;
 
   &:hover,
   &:focus {
-    border-bottom: 1.5px solid transparent;
+    border-bottom: 2px solid transparent;
   }
 `
 
@@ -60,10 +52,7 @@ const IconSpan = styled.span`
 
 const Contact = () => {
   return (
-    <>
-      <Container>
-        <ContactImage />
-      </Container>
+    <ContactSection>
       <TextContainer>
         <SectionHeading>Contact Me</SectionHeading>
         <Paragraph>
@@ -104,7 +93,7 @@ const Contact = () => {
           </IconSpan>
         </IconContainer>
       </TextContainer>
-    </>
+    </ContactSection>
   )
 }
 

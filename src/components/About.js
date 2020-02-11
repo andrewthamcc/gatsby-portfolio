@@ -1,21 +1,26 @@
 import React from "react"
+import styled from "styled-components"
 import { TextContainer, Paragraph } from "./Styles"
+
+const AboutSection = styled.section`
+  padding-bottom: 4rem;
+`
 
 const About = () => {
   return (
-    <>
+    <AboutSection>
       <TextContainer>
         <Paragraph>
-          I'm a developer based in Toronto, Canada. I graduated from The
-          University of Toronto with a degree in Physics after which I trained
-          and worked as a Chef. I've opened a national test kitchen for Sobeys
-          Inc, cooked in fine dining restaurants in Melbourne, Australia, headed
-          kitchens in Toronto, and have been a part of food focused technology
-          startups.
+          I'm a front end developer based in Toronto, Canada. I graduated from
+          The University of Toronto with a degree in Physics after which I
+          trained and worked as a Chef. I've opened a national test kitchen for
+          Sobeys Inc, cooked in fine dining restaurants in Melbourne, Australia,
+          headed kitchens in Toronto, and have been a part of food focused
+          technology startups.
         </Paragraph>
         <Paragraph>
           In 2019, after a decade of pursuing and accomplishing my childhood
-          dream, I decided to retire from the hospitality industry and retrain
+          dreams, I decided to retire from the hospitality industry and retrain
           in web development. I've always had a fondness and curiosity for the
           web since I was young teenager learning HTML in the early days of the
           internet. I have also always enjoyed programming which I studied
@@ -28,7 +33,7 @@ const About = () => {
           applications to life.
         </Paragraph>
       </TextContainer>
-    </>
+    </AboutSection>
   )
 }
 

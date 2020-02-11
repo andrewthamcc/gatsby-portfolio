@@ -2,13 +2,15 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"
 
-import { Container } from "./Styles"
-import MainImage from "../images/hero.jpg"
+import { Container, SectionImage } from "./Styles"
+import HeroImage from "../images/hero.jpg"
 
 const HeroSection = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
+
+  padding: 3.5rem 0;
 `
 
 const HeroHeading = styled.h1`
@@ -17,7 +19,7 @@ const HeroHeading = styled.h1`
   color: #080808;
   text-align: right;
   text-transform: uppercase;
-  margin-top: 8rem;
+  margin-top: 3rem;
 `
 
 const IconContainer = styled.div`
@@ -46,17 +48,6 @@ const IconSpan = styled.span`
   &:focus {
     transform: scale(1.2);
   }
-`
-
-const HeroImage = styled.div`
-  background-image: url(${MainImage});
-  filter: grayscale();
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 70%;
-  height: 350px;
-
-  margin: 3rem 0;
 `
 
 const Hero = () => {
@@ -108,7 +99,7 @@ const Hero = () => {
           </IconSpan>
         </IconContainer>
 
-        <HeroImage />
+        <SectionImage image={HeroImage} y={60} style={{ marginTop: "2rem" }} />
       </Container>
     </HeroSection>
   )

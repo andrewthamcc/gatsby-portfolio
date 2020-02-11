@@ -11,9 +11,20 @@ export const TextContainer = styled.div`
   margin: 0 auto;
 `
 
+export const SectionImage = styled.div`
+  background-image: ${props => `url(${props.image})`};
+  filter: grayscale();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: ${props => `${props.y}%`};
+  height: 400px;
+`
+
 export const SectionHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: 400;
+  text-align: ${props => (props.right ? "right" : "left")};
   text-transform: uppercase;
   margin-bottom: 1rem;
 `

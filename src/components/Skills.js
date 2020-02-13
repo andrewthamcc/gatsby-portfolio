@@ -11,9 +11,10 @@ const SkillList = styled.ul`
   color: #080808;
 
   display: flex;
+  margin-top: 1rem;
 
   div {
-    width: 33.33%;
+    width: 25%;
   }
 
   li {
@@ -33,15 +34,20 @@ const Skills = () => {
             <div>
               <li>HTML5</li>
               <li>CSS3</li>
-              <li>JavaScript</li>
+              <li>SASS</li>
             </div>
             <div>
+              <li>JavaScript</li>
+              <li>jQuery</li>
               <li>TypeScript</li>
+            </div>
+            <div>
               <li>React</li>
               <li>Redux</li>
+              <li>GraphQL</li>
             </div>
             <div>
-              <li>GraphQL</li>
+              <li>Firebase</li>
               <li>Styled-Components</li>
               <li>Git</li>
             </div>

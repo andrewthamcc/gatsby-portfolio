@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Andrew Tham`,
-    description: `Andrew Tham is a Toronto based developer.`,
+    description: `Andrew Tham is a Toronto based front end developer.`,
     author: `Andrew Tham`,
+    twitter: `https://twitter.com/Andrew_Tham`,
+    url: `http://andrewtham.cc`,
+    image: `${__dirname}/src/images/hero.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

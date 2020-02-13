@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"
-
 import { TextContainer, Container, Paragraph, SectionHeading } from "./Styles"
+import SocialIcons from "../components/SocialIcons"
 
 const ContactSection = styled.section`
   padding-top: 4rem;
@@ -14,39 +13,11 @@ const ContactEmail = styled(Paragraph)`
   display: inline;
   transition: 0.3s border ease;
   padding-bottom: 2px;
-  border-bottom: 2px solid #080808;
+  border-bottom: 2px solid transparent;
 
   &:hover,
   &:focus {
-    border-bottom: 2px solid transparent;
-  }
-`
-
-const IconContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1.5rem;
-`
-
-const IconSpan = styled.span`
-  font-size: 1rem;
-  margin: 0 0.5rem;
-  display: flex;
-  transition: 0.3s transform ease;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.2);
+    border-bottom: 2px solid #080808;
   }
 `
 
@@ -62,36 +33,7 @@ const Contact = () => {
         <a href="mailto: hello@andrewtham.cc">
           <ContactEmail>hello@andrewtham.cc</ContactEmail>
         </a>
-
-        <IconContainer>
-          <IconSpan>
-            <a
-              href="https://github.com/andrewthamcc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-          </IconSpan>
-          <IconSpan>
-            <a
-              href="https://linkedin.com/in/andrewthamcc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn />
-            </a>
-          </IconSpan>
-          <IconSpan>
-            <a
-              href="https://twitter.com/andrew_tham"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter />
-            </a>
-          </IconSpan>
-        </IconContainer>
+        <SocialIcons />
       </TextContainer>
     </ContactSection>
   )

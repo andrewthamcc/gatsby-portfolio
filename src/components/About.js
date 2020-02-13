@@ -14,9 +14,9 @@ const About = () => {
           I'm a front end developer based in Toronto, Canada. I graduated from
           The University of Toronto with a degree in Physics after which I
           trained and worked as a Chef. I've opened a national test kitchen for
-          Sobeys Inc, cooked in fine dining restaurants in Melbourne, Australia,
-          headed kitchens in Toronto, and have been a part of food focused
-          technology startups.
+          Sobeys Inc., cooked in fine dining restaurants in Melbourne,
+          Australia, headed kitchens in Toronto, and have been a part of food
+          focused technology startups.
         </Paragraph>
         <Paragraph>
           In 2019, after a decade of pursuing and accomplishing my childhood

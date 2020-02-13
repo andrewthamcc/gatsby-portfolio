@@ -24,13 +24,12 @@ export const SectionImage = styled.div`
 export const SectionHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: 400;
-  text-align: ${props => (props.right ? "right" : "left")};
   text-transform: uppercase;
   margin-bottom: 1rem;
 `
 
 export const Paragraph = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   color: rgb(105, 105, 105);

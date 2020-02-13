@@ -1,6 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
-import Link from "gatsby-link"
 import { TextContainer, Paragraph, SectionHeading } from "./Styles"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -58,7 +58,7 @@ const WorkLink = styled.span`
 `
 
 const Story = styled.div`
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: center;
 `
 
@@ -97,7 +97,7 @@ const Works = () => {
           }
         }
       }
-      rousillon: file(relativePath: { eq: "rousillon.jpg" }) {
+      desk: file(relativePath: { eq: "desk.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -118,7 +118,7 @@ const Works = () => {
             <Link to="/perpetua">
               <Img fluid={data.perpetua.childImageSharp.fluid} />
             </Link>
-            <WorkItemTitle>Perpetua</WorkItemTitle>
+            <WorkItemTitle>Perpetua / Draper AI</WorkItemTitle>
             <Paragraph>
               I had the opportunity to work as an intern at Perpetua, a start-up
               based in Toronto.
@@ -172,7 +172,7 @@ const Works = () => {
         </WorkItemContainer>
 
         <Story>
-          <Img fluid={data.rousillon.childImageSharp.fluid} />
+          <Img fluid={data.desk.childImageSharp.fluid} />
           <StoryParagraph>
             I get asked a lot about what my story is and how I went from cooking
             to becoming a developer.

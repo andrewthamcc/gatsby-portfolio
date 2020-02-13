@@ -910,6 +910,18 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify/icons-logos@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.0.9.tgz#4fbcfbca6722e78b68d7215b6ab9e347e06df5cf"
+  integrity sha512-bwQQkQ6zGtdGYnyCOk7hY6Lja/8t/OjFO+pkfjWq5gxYZ2fBsGFeN5hYidK8yraormgqMQ9OEL9j2NgbpDjojg==
+
+"@iconify/react@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.1.tgz#38526508f722e0b617723d79209bb1e6d8c59c61"
+  integrity sha512-BRbPW/vkyWi6n2dHx4O8Cp0RKeI4KsxieLZ+UcyknCkk1IVxii5IassCIKHJ3jWB6s6uLAWq5EnHJniI7er9+w==
+  dependencies:
+    react "^16.8.3"
+
 "@jimp/bmp@^0.6.8":
   version "0.6.8"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.6.8.tgz#8abbfd9e26ba17a47fab311059ea9f7dd82005b6"
@@ -9992,7 +10004,7 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react@^16.12.0:
+react@^16.12.0, react@^16.8.3:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==

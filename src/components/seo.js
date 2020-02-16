@@ -89,14 +89,14 @@ SEO.defaultProps = {
   description: ``,
 }
 
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-  twitter: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-}
+// SEO.propTypes = {
+//   description: PropTypes.string,
+//   lang: PropTypes.string,
+//   meta: PropTypes.arrayOf(PropTypes.object),
+//   title: PropTypes.string.isRequired,
+//   twitter: PropTypes.string.isRequired,
+//   url: PropTypes.string.isRequired,
+//   image: PropTypes.string.isRequired,
+// }
 
 export default SEO

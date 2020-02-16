@@ -1,7 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { TextContainer, Paragraph, SectionHeading } from "./Styles"
+import {
+  TextContainer,
+  SectionHeading,
+  Paragraph,
+  LinkStyle,
+} from "./SharedStyles"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -36,6 +41,14 @@ const WorkItem = styled.div`
   }
 `
 
+const WorkImageContainer = styled.div`
+  transition-duration: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`
+
 const WorkItemTitle = styled.h3`
   font-size: 1.2rem;
   font-weight: 400;
@@ -43,27 +56,13 @@ const WorkItemTitle = styled.h3`
   padding: 0;
 `
 
-const WorkLink = styled.span`
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  display: inline-block;
-  border-bottom: 2px solid transparent;
-  transition: 0.3s border ease;
-
-  &:hover,
-  &:focus {
-    border-bottom: 2px solid #080808;
-  }
-`
-
 const Story = styled.div`
   margin: 2rem 0;
   text-align: center;
 `
 
-const StoryParagraph = styled(Paragraph)`
-  margin-top: 1rem;
+const StoryImage = styled.div`
+  height: 350px;
 `
 
 const Works = () => {
@@ -116,7 +115,9 @@ const Works = () => {
         <WorkItemContainer>
           <WorkItem>
             <Link to="/perpetua">
-              <Img fluid={data.perpetua.childImageSharp.fluid} />
+              <WorkImageContainer>
+                <Img fluid={data.perpetua.childImageSharp.fluid} />
+              </WorkImageContainer>
             </Link>
             <WorkItemTitle>Perpetua / Draper AI</WorkItemTitle>
             <Paragraph>
@@ -124,27 +125,31 @@ const Works = () => {
               based in Toronto.
             </Paragraph>
             <Link to="/perpetua">
-              <WorkLink>Read about my experience</WorkLink>
+              <LinkStyle>Read about my experience</LinkStyle>
             </Link>
           </WorkItem>
 
           <WorkItem>
             <Link to="/cafikmartin">
-              <Img fluid={data.lcm.childImageSharp.fluid} />
+              <WorkImageContainer>
+                <Img fluid={data.lcm.childImageSharp.fluid} />
+              </WorkImageContainer>
             </Link>
             <WorkItemTitle>Cafik-Martin Coaching</WorkItemTitle>
             <Paragraph>
-              A three page static portfolio website designed, built, and
-              deployed for Orthodontic Speaker Laura Cafik-Martin.
+              A three page static site designed, built, and deployed for
+              Orthodontic Speaker Laura Cafik-Martin.
             </Paragraph>
             <Link to="/cafikmartin">
-              <WorkLink>View Project</WorkLink>
+              <LinkStyle>View Project</LinkStyle>
             </Link>
           </WorkItem>
 
           <WorkItem>
             <Link to="/bikewatch">
-              <Img fluid={data.bikewatch.childImageSharp.fluid} />
+              <WorkImageContainer>
+                <Img fluid={data.bikewatch.childImageSharp.fluid} />
+              </WorkImageContainer>
             </Link>
             <WorkItemTitle>BikeWatch Toronto</WorkItemTitle>
             <Paragraph>
@@ -152,13 +157,18 @@ const Works = () => {
               Immersive program.
             </Paragraph>
             <Link to="/bikewatch">
-              <WorkLink>View Project</WorkLink>
+              <LinkStyle>View Project</LinkStyle>
             </Link>
           </WorkItem>
 
           <WorkItem>
             <Link to="/war">
-              <Img fluid={data.war.childImageSharp.fluid} />
+              <WorkImageContainer>
+                <Img
+                  fluid={data.war.childImageSharp.fluid}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+              </WorkImageContainer>
             </Link>
             <WorkItemTitle>War Card Game</WorkItemTitle>
             <Paragraph>
@@ -166,19 +176,25 @@ const Works = () => {
               Development Immersive program.
             </Paragraph>
             <Link to="/war">
-              <WorkLink>View Project</WorkLink>
+              <LinkStyle>View Project</LinkStyle>
             </Link>
           </WorkItem>
         </WorkItemContainer>
 
         <Story>
-          <Img fluid={data.desk.childImageSharp.fluid} />
-          <StoryParagraph>
+          <StoryImage>
+            <Img
+              fluid={data.desk.childImageSharp.fluid}
+              style={{ maxHeight: "100%" }}
+              imgStyle={{ objectFit: "cover", objectPosition: "50% 30%" }}
+            />
+          </StoryImage>
+          <Paragraph>
             I get asked a lot about what my story is and how I went from cooking
             to becoming a developer.
-          </StoryParagraph>
+          </Paragraph>
           <Link to="/mystory">
-            <WorkLink center>Read about my journey...</WorkLink>
+            <LinkStyle center>Read about my journey...</LinkStyle>
           </Link>
         </Story>
       </TextContainer>

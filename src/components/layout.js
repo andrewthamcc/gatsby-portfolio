@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled, { keyframes } from "styled-components"
-import { Container } from "./Styles"
+import { Container } from "./SharedStyles"
 
 const FadeIn = keyframes`
   0%{

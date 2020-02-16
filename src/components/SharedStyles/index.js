@@ -38,3 +38,18 @@ export const Paragraph = styled.p`
     margin-bottom: 0;
   }
 `
+
+export const LinkStyle = styled.span`
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #080808;
+  transition: 0.3s border ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  display: inline;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #080808;
+  }
+`

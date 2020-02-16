@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 
-import { Container, TextContainer, SectionImage } from "./Styles"
+import { Container, TextContainer, SectionImage } from "./SharedStyles"
 import SocialIcons from "./SocialIcons"
 import HeroImage from "../images/hero.jpg"
 

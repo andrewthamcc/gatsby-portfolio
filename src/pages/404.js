@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import { Container, Paragraph } from "../components/styles"
+import { Paragraph } from "../components/styles"
 import SEO from "../components/seo"
 
 const NotFondTitle = styled.h2`

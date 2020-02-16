@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"
+import { Icon } from "@iconify/react"
+import githubIcon from "@iconify/icons-fa-brands/github"
+import linkedinIn from "@iconify/icons-fa-brands/linkedin-in"
+import twitterIcon from "@iconify/icons-fa-brands/twitter"
 
 const IconContainer = styled.div`
   display: flex;
@@ -39,7 +42,7 @@ const SocialIcons = props => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub />
+          <Icon icon={githubIcon} />
         </a>
       </IconSpan>
       <IconSpan>
@@ -48,7 +51,7 @@ const SocialIcons = props => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedinIn />
+          <Icon icon={linkedinIn} />
         </a>
       </IconSpan>
       <IconSpan>
@@ -57,7 +60,7 @@ const SocialIcons = props => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTwitter />
+          <Icon icon={twitterIcon} />
         </a>
       </IconSpan>
     </IconContainer>

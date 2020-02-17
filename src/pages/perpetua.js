@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import {
@@ -6,7 +7,7 @@ import {
   TextContainer,
   SectionHeading,
   Paragraph,
-} from "../components/styles"
+} from "../components/SharedStyles"
 import TechIcons, { iconTypes } from "../components/TechIcons"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -19,14 +20,14 @@ const PerpetuaSection = styled.section`
 const Perpetua = () => {
   const data = useStaticQuery(graphql`
     query {
-      perpetua: file(relativePath: { eq: "perpetua.png" }) {
+      perpetua: file(relativePath: { eq: "perpetua/perpetua.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      perpetuaTeam: file(relativePath: { eq: "perpetua-team.png" }) {
+      perpetuaTeam: file(relativePath: { eq: "perpetua/perpetua-team.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -38,9 +39,10 @@ const Perpetua = () => {
 
   return (
     <Layout>
+      <SEO title="Draper AI" />
       <PerpetuaSection>
         <TextContainer>
-          <SectionHeading>Working at Perpetua</SectionHeading>
+          <SectionHeading>Working at Draper AI</SectionHeading>
           <Paragraph>
             I had the opportunity to work as a Frontend Engineering Intern at
             Draper AI from October 2019 to January 2020. I was incredibly

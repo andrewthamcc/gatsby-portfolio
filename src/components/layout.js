@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled, { keyframes } from "styled-components"
 import { Container } from "./SharedStyles"
@@ -14,7 +15,31 @@ const FadeIn = keyframes`
 
 const LayoutDiv = styled.div`
   opacity: 0;
-  animation: ${FadeIn} 0.6s 0.3s ease-in-out forwards;
+  animation: ${FadeIn} 0.6s 0.3s ease-in forwards;
+`
+
+const Header = styled.header`
+  display: ${props => (props.none ? "none" : "block")};
+  text-align: right;
+  padding-top: 1.5rem;
+`
+
+const HomeLink = styled.span`
+  background-color: #080808;
+  color: #ffffff;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 2px solid #080808;
+  border-radius: 5px;
+  transition: 0.3s ease transform;
+
+  :hover {
+    transform: scale(1.1);
+  }
 `
 
 const Footer = styled.footer`
@@ -25,20 +50,17 @@ const Footer = styled.footer`
   margin-top: 5rem;
 `
 
-const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
+const Layout = ({ children, none }) => {
   return (
     <>
       <LayoutDiv>
+        <Header none={none}>
+          <Container>
+            <Link to="/">
+              <HomeLink>at</HomeLink>
+            </Link>
+          </Container>
+        </Header>
         <main>{children}</main>
         <Footer>
           <Container>Andrew Tham © {new Date().getFullYear()}</Container>

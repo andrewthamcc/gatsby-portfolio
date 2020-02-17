@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import {
@@ -6,7 +7,7 @@ import {
   TextContainer,
   SectionHeading,
   Paragraph,
-} from "../components/styles"
+} from "../components/SharedStyles"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -22,14 +23,14 @@ const StoryParagraph = styled(Paragraph)`
 const Mystory = () => {
   const data = useStaticQuery(graphql`
     query {
-      rousillon: file(relativePath: { eq: "rousillon.jpg" }) {
+      rousillon: file(relativePath: { eq: "story/rousillon.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      python: file(relativePath: { eq: "python.jpg" }) {
+      python: file(relativePath: { eq: "story/python.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -41,6 +42,7 @@ const Mystory = () => {
 
   return (
     <Layout>
+      <SEO title="My Journey" />
       <StorySection>
         <TextContainer>
           <SectionHeading>My Story</SectionHeading>

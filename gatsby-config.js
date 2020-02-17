@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Andrew Tham`,
-    description: `Andrew Tham is a Toronto based front end developer.`,
     author: `Andrew Tham`,
-    twitter: `https://twitter.com/Andrew_Tham`,
+    description: `Andrew Tham is a Toronto based frontend developer.`,
+    image: `/static/hero.jpg`,
+    keywords: `web devloper, front end developer, web dev, dev, portfolio, toronto, andrew tham, frontend developer, frontend`,
+    title: `Andrew Tham`,
+    twitterName: `@Andrew_Tham`,
     url: `http://andrewtham.cc`,
-    image: `${__dirname}/src/images/hero.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,7 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: ``, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-sass`,

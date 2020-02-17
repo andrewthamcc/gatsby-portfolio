@@ -1,5 +1,13 @@
 import styled from "styled-components"
 
+export const MediaWidths = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+}
+
 export const Container = styled.div`
   width: 85%;
   max-width: 1350px;
@@ -43,6 +51,7 @@ export const LinkStyle = styled.span`
   font-size: 0.8rem;
   font-weight: 600;
   color: #080808;
+
   transition: 0.3s border ease;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
@@ -51,5 +60,21 @@ export const LinkStyle = styled.span`
   &:hover,
   &:focus {
     border-bottom: 2px solid #080808;
+  }
+`
+
+export const PortfolioLinkContainer = styled.div`
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+`
+
+export const PortfolioLink = styled(LinkStyle)`
+  display: block;
+  margin: 0 1rem;
+
+  &:first-of-type {
+    margin-left: 0;
   }
 `

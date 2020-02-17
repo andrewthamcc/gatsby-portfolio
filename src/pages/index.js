@@ -14,8 +14,8 @@ import {
   SectionHeading,
   LinkStyle,
 } from "../components/SharedStyles"
-import SkillsImage from "../images/lagape.jpg"
-import ContactImage from "../images/contact.jpg"
+import SkillsImage from "../images/home/lagape.jpg"
+import ContactImage from "../images/home/contact.jpg"
 
 const AboutSection = styled.section`
   margin-bottom: 4rem;
@@ -26,8 +26,8 @@ const ContactSection = styled.section`
 `
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+  <Layout none>
+    <SEO title="Frontend Developer" />
     <Hero />
     <AboutSection>
       <TextContainer>

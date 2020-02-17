@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { Container, TextContainer, SectionImage } from "./SharedStyles"
 import SocialIcons from "./SocialIcons"
-import HeroImage from "../images/hero.jpg"
+import HeroImage from "../images/home/hero.jpg"
 
 const HeroSection = styled.section`
   height: 100vh;

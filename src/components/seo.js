@@ -1,34 +1,36 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
-function SEO({ description, lang, meta, title, twitter, url }) {
+function SEO({
+  author,
+  description,
+  image,
+  keywords,
+  lang,
+  meta,
+  title,
+  twitterName,
+  url,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
             author
+            description
             image
+            keywords
+            title
+            twitterName
             url
-            twitter
           }
         }
       }
     `
   )
-
-  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
@@ -36,19 +38,31 @@ function SEO({ description, lang, meta, title, twitter, url }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.title} | %s`}
       meta={[
         {
+          name: `author`,
+          content: site.siteMetadata.author,
+        },
+        {
           name: `description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:content`,
+          content: site.siteMetadata.description,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
         {
           property: `og:url`,
@@ -64,19 +78,23 @@ function SEO({ description, lang, meta, title, twitter, url }) {
         },
         {
           name: `twitter:card`,
-          content: site.siteMetadata.image,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
         {
-          name: `twitter:title`,
-          content: title,
+          name: `twitter:creator`,
+          content: site.siteMetadata.twitterName,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.url,
         },
       ].concat(meta)}
     />
@@ -86,17 +104,23 @@ function SEO({ description, lang, meta, title, twitter, url }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  author: `Andrew Tham`,
+  description: `Andrew Tham is a Toronto based developer.`,
+  image: ``,
+  keywords: ``,
+  title: ``,
+  twitterName: ``,
+  url: ``,
 }
 
-// SEO.propTypes = {
-//   description: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   title: PropTypes.string.isRequired,
-//   twitter: PropTypes.string.isRequired,
-//   url: PropTypes.string.isRequired,
-//   image: PropTypes.string.isRequired,
-// }
+SEO.propTypes = {
+  author: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  keywords: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  twitterName: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+}
 
 export default SEO

@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import {
   Container,
   TextContainer,
   SectionHeading,
   Paragraph,
-  LinkStyle,
+  PortfolioLinkContainer,
+  PortfolioLink,
 } from "../components/SharedStyles"
 import TechIcons, { iconTypes } from "../components/TechIcons"
 
@@ -17,12 +19,43 @@ const BikeWatchSection = styled.section`
   padding: 2rem 0;
 `
 
+const AppImages = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 4rem;
+`
+
+const AppImagesLeft = styled.div`
+  width: 50%;
+  margin-right: 1rem;
+`
+
+const AppImagesRight = styled.div`
+  width: 50%;
+  margin-left: 1rem;
+`
+
 const BikeWatch = () => {
   const data = useStaticQuery(graphql`
     query {
-      bikewatch: file(relativePath: { eq: "bikewatch.png" }) {
+      bikewatch: file(relativePath: { eq: "bike/bikewatch.png" }) {
         childImageSharp {
           fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bikewatchMap: file(relativePath: { eq: "bike/bikewatch-map.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bikewatchReport: file(relativePath: { eq: "bike/bikewatch-report.png" }) {
+        childImageSharp {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -32,6 +65,7 @@ const BikeWatch = () => {
 
   return (
     <Layout>
+      <SEO title="BikeWatch" />
       <BikeWatchSection>
         <TextContainer>
           <SectionHeading>BikeWatch</SectionHeading>
@@ -47,22 +81,22 @@ const BikeWatch = () => {
             watch.
           </Paragraph>
 
-          <Paragraph>
+          <PortfolioLinkContainer>
             <a
-              href="https://github.com/andrewthamcc/LCM-coaching"
+              href="https://github.com/andrewthamcc/bikewatch-hooks/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkStyle>View Repository</LinkStyle>
+              <PortfolioLink>View Repository</PortfolioLink>
             </a>{" "}
             <a
-              href="http://cafikmartincoaching.com"
+              href="https://andrewthamcc.github.io/bikewatch-hooks/#/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkStyle>View Live</LinkStyle>
+              <PortfolioLink>View Live</PortfolioLink>
             </a>
-          </Paragraph>
+          </PortfolioLinkContainer>
         </TextContainer>
         <Container>
           <Img
@@ -94,6 +128,24 @@ const BikeWatch = () => {
             would like to build out a dedicated database with Node.js and
             Express instead of depending on BikeWise.
           </Paragraph>
+          <AppImages>
+            <AppImagesLeft>
+              <Img
+                fluid={data.bikewatchReport.childImageSharp.fluid}
+                style={{
+                  boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
+                }}
+              />
+            </AppImagesLeft>
+            <AppImagesRight>
+              <Img
+                fluid={data.bikewatchMap.childImageSharp.fluid}
+                style={{
+                  boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
+                }}
+              />
+            </AppImagesRight>
+          </AppImages>
         </TextContainer>
       </BikeWatchSection>
     </Layout>

@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import {
   Container,
   TextContainer,
   SectionHeading,
   Paragraph,
-  LinkStyle,
+  PortfolioLinkContainer,
+  PortfolioLink,
 } from "../components/SharedStyles"
 import TechIcons, { iconTypes } from "../components/TechIcons"
 
@@ -32,6 +34,7 @@ const Cafikmartin = () => {
 
   return (
     <Layout>
+      <SEO title="LCM Coaching" />
       <CafikMartinSection>
         <TextContainer>
           <SectionHeading>Cafik-Martin Coaching</SectionHeading>
@@ -40,22 +43,22 @@ const Cafikmartin = () => {
             design, create, and deploy a website of her portfolio, services, and
             information.
           </Paragraph>
-          <Paragraph>
+          <PortfolioLinkContainer>
             <a
               href="https://github.com/andrewthamcc/LCM-coaching"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkStyle>View Repository</LinkStyle>
-            </a>{" "}
+              <PortfolioLink>View Repository</PortfolioLink>
+            </a>
             <a
               href="http://cafikmartincoaching.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkStyle>View Live</LinkStyle>
+              <PortfolioLink>View Live</PortfolioLink>
             </a>
-          </Paragraph>
+          </PortfolioLinkContainer>
         </TextContainer>
         <Container>
           <Img

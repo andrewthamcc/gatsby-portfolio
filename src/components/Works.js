@@ -42,6 +42,7 @@ const WorkItem = styled.div`
 `
 
 const WorkImageContainer = styled.div`
+  box-shadow: 0 16px 32px 0 rgba(55, 58, 75, 0.12);
   transition-duration: 0.3s;
 
   &:hover {
@@ -62,13 +63,13 @@ const Story = styled.div`
 `
 
 const StoryImage = styled.div`
-  height: 350px;
+  height: 400px;
 `
 
 const Works = () => {
   const data = useStaticQuery(graphql`
     query {
-      perpetua: file(relativePath: { eq: "perpetua.png" }) {
+      perpetua: file(relativePath: { eq: "perpetua/perpetua.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -82,21 +83,21 @@ const Works = () => {
           }
         }
       }
-      bikewatch: file(relativePath: { eq: "bikewatch.png" }) {
+      bikewatch: file(relativePath: { eq: "bike/bikewatch.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      war: file(relativePath: { eq: "war.png" }) {
+      war: file(relativePath: { eq: "war/war.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      desk: file(relativePath: { eq: "desk.jpg" }) {
+      desk: file(relativePath: { eq: "story/desk.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -121,8 +122,8 @@ const Works = () => {
             </Link>
             <WorkItemTitle>Perpetua / Draper AI</WorkItemTitle>
             <Paragraph>
-              I had the opportunity to work as an intern at Perpetua, a start-up
-              based in Toronto.
+              I had the opportunity to work as an intern at Draper AI, a
+              start-up based in Toronto.
             </Paragraph>
             <Link to="/perpetua">
               <LinkStyle>Read about my experience</LinkStyle>
@@ -137,8 +138,8 @@ const Works = () => {
             </Link>
             <WorkItemTitle>Cafik-Martin Coaching</WorkItemTitle>
             <Paragraph>
-              A three page static site designed, built, and deployed for
-              Orthodontic Speaker Laura Cafik-Martin.
+              Static website designed, built, and deployed for Orthodontic
+              Speaker Laura Cafik-Martin.
             </Paragraph>
             <Link to="/cafikmartin">
               <LinkStyle>View Project</LinkStyle>
@@ -186,7 +187,7 @@ const Works = () => {
             <Img
               fluid={data.desk.childImageSharp.fluid}
               style={{ maxHeight: "100%" }}
-              imgStyle={{ objectFit: "cover", objectPosition: "50% 30%" }}
+              imgStyle={{ objectFit: "cover", objectPosition: "50% 40%" }}
             />
           </StoryImage>
           <Paragraph>

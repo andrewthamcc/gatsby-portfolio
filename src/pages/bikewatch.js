@@ -9,6 +9,7 @@ import {
   Paragraph,
   PortfolioLinkContainer,
   PortfolioLink,
+  MediaWidths,
 } from "../components/SharedStyles"
 import TechIcons, { iconTypes } from "../components/TechIcons"
 
@@ -24,16 +25,33 @@ const AppImages = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 4rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2rem;
+  }
 `
 
 const AppImagesLeft = styled.div`
   width: 50%;
   margin-right: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 100%;
+    margin: 1rem 0;
+  }
 `
 
 const AppImagesRight = styled.div`
   width: 50%;
   margin-left: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 100%;
+    margin: 1rem 0;
+  }
 `
 
 const BikeWatch = () => {

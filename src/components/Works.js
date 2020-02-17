@@ -6,6 +6,7 @@ import {
   SectionHeading,
   Paragraph,
   LinkStyle,
+  MediaWidths,
 } from "./SharedStyles"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -18,6 +19,10 @@ const WorksSection = styled.section`
 const WorkItemContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: ${MediaWidths.mobileL}) {
+    flex-direction: column;
+  }
 `
 
 const WorkItem = styled.div`
@@ -39,6 +44,11 @@ const WorkItem = styled.div`
   p {
     flex-grow: 1;
   }
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 100%;
+    margin: 2rem 0;
+  }
 `
 
 const WorkImageContainer = styled.div`
@@ -55,15 +65,27 @@ const WorkItemTitle = styled.h3`
   font-weight: 400;
   margin: 1rem 0;
   padding: 0;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    font-size: 1rem;
+  }
 `
 
 const Story = styled.div`
   margin: 2rem 0;
   text-align: center;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    text-align: left;
+  }
 `
 
 const StoryImage = styled.div`
   height: 400px;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    height: 250px;
+  }
 `
 
 const Works = () => {

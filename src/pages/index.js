@@ -40,14 +40,6 @@ const IndexPage = () => (
           focused technology startups.
         </Paragraph>
         <Paragraph>
-          In 2019, after a decade of pursuing and accomplishing my childhood
-          dreams, I decided to retire from the hospitality industry and retrain
-          in web development. I've always had a fondness and curiosity for the
-          web since I was young teenager learning HTML in the early days of the
-          internet. I have also always enjoyed programming which I studied
-          throughout high school and during my time at university.
-        </Paragraph>
-        <Paragraph>
           I'm an adept problem solver, have a strong background of working in
           teams, and enjoy challenge. I'm passionate about technology and using
           code to solve problems and to create and bring websites and web

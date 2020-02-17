@@ -1,7 +1,12 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 
-import { Container, TextContainer, SectionImage } from "./SharedStyles"
+import {
+  Container,
+  TextContainer,
+  SectionImage,
+  MediaWidths,
+} from "./SharedStyles"
 import SocialIcons from "./SocialIcons"
 import HeroImage from "../images/home/hero.jpg"
 
@@ -11,6 +16,10 @@ const HeroSection = styled.section`
   flex-direction: column;
 
   padding: 3.5rem 0;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    height: auto;
+  }
 `
 
 const HeroHeading = styled.h1`
@@ -20,6 +29,18 @@ const HeroHeading = styled.h1`
   text-align: right;
   text-transform: uppercase;
   margin-top: 3rem;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: ${MediaWidths.mobileL}) {
+    font-size: 1.75rem;
+  }
 `
 
 const Hero = () => {

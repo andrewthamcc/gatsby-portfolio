@@ -3,8 +3,9 @@ import styled from "styled-components"
 export const MediaWidths = {
   mobileS: "320px",
   mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
+  mobileL: "450px",
+  tabletS: "600px",
+  tabletL: "768px",
   laptop: "1024px",
 }
 
@@ -12,11 +13,19 @@ export const Container = styled.div`
   width: 85%;
   max-width: 1350px;
   margin: 0 auto;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    width: 90%;
+  }
 `
 export const TextContainer = styled.div`
   width: 80%;
   max-width: 1350px;
   margin: 0 auto;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    width: 90%;
+  }
 `
 
 export const SectionImage = styled.div`
@@ -27,6 +36,14 @@ export const SectionImage = styled.div`
   background-position-x: center;
   background-position-y: ${props => `${props.y}%`};
   height: 400px;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    height: 300px;
+  }
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    height: 250px;
+  }
 `
 
 export const SectionHeading = styled.h2`
@@ -34,6 +51,10 @@ export const SectionHeading = styled.h2`
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 1rem;
+
+  @media (max-width: ${MediaWidths.mobileL}) {
+    font-size: 1.3rem;
+  }
 `
 
 export const Paragraph = styled.p`

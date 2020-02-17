@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import {
-  Container,
   TextContainer,
   SectionHeading,
   Paragraph,
+  MediaWidths,
 } from "./SharedStyles"
 
 const SkillsSection = styled.section`
@@ -12,20 +12,26 @@ const SkillsSection = styled.section`
 `
 
 const SkillsContainer = styled.div`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #080808;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const SkillsList = styled.ul`
-  width: 25%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
 `
 
 const SkillsListItem = styled.li`
-  margin: 1rem 0 0 2rem;
+  margin: 1.5rem 0 0 1rem;
   list-style: circle;
 `
 
@@ -37,8 +43,7 @@ const Skills = () => {
         <Paragraph>
           Some of the technologies I've learned and worked with include:
         </Paragraph>
-      </TextContainer>
-      <Container>
+
         <SkillsContainer>
           <SkillsList>
             <SkillsListItem>HTML5</SkillsListItem>
@@ -61,7 +66,7 @@ const Skills = () => {
             <SkillsListItem>Git</SkillsListItem>
           </SkillsList>
         </SkillsContainer>
-      </Container>
+      </TextContainer>
     </SkillsSection>
   )
 }

@@ -1,2 +1,0 @@
-- add images to bottom of works page
-- fix seo prop types

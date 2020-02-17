@@ -9,6 +9,7 @@ import {
   Paragraph,
   PortfolioLinkContainer,
   PortfolioLink,
+  MediaWidths,
 } from "../components/SharedStyles"
 import TechIcons, { iconTypes } from "../components/TechIcons"
 
@@ -23,16 +24,34 @@ const AppImages = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2rem;
+  }
 `
 
 const AppImagesLeft = styled.div`
   width: 40%;
   margin-right: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 75%;
+    margin: 1rem auto;
+  }
 `
 
 const AppImagesRight = styled.div`
   width: 60%;
   margin-left: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 100%;
+    margin: 1rem 0;
+    order: -1;
+  }
 `
 
 const War = () => {

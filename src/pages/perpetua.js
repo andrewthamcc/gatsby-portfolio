@@ -1,21 +1,21 @@
-import React from "react"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import styled from "styled-components"
+import React from "react";
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import styled from "styled-components";
 import {
   Container,
   TextContainer,
   SectionHeading,
   Paragraph,
-} from "../components/SharedStyles"
-import TechIcons, { iconTypes } from "../components/TechIcons"
+} from "../components/SharedStyles";
+import TechIcons, { iconTypes } from "../components/TechIcons";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const PerpetuaSection = styled.section`
   padding: 2rem 0;
-`
+`;
 
 const Perpetua = () => {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ const Perpetua = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -121,7 +121,7 @@ const Perpetua = () => {
         </TextContainer>
       </PerpetuaSection>
     </Layout>
-  )
-}
+  );
+};
 
-export default Perpetua
+export default Perpetua;

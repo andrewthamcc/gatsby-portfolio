@@ -1,19 +1,19 @@
-import React from "react"
-import styled from "styled-components"
-import { Icon } from "@iconify/react"
-import { MediaWidths } from "./SharedStyles"
+import React from "react";
+import styled from "styled-components";
+import { Icon } from "@iconify/react";
+import { MediaWidths } from "./SharedStyles";
 
-import apollostackIcon from "@iconify/icons-logos/apollostack"
-import gatsbyIcon from "@iconify/icons-logos/gatsby"
-import gitIcon from "@iconify/icons-logos/git-icon"
-import graphqlIcon from "@iconify/icons-logos/graphql"
-import html5 from "@iconify/icons-logos/html-5"
-import javascriptIcon from "@iconify/icons-logos/javascript"
-import jqueryIcon from "@iconify/icons-logos/jquery"
-import reactIcon from "@iconify/icons-logos/react"
-import reduxIcon from "@iconify/icons-logos/redux"
-import sassIcon from "@iconify/icons-logos/sass"
-import typeScriptIcon from "@iconify/icons-logos/typescript-icon"
+import apollostackIcon from "@iconify/icons-logos/apollostack";
+import gatsbyIcon from "@iconify/icons-logos/gatsby";
+import gitIcon from "@iconify/icons-logos/git-icon";
+import graphqlIcon from "@iconify/icons-logos/graphql";
+import html5 from "@iconify/icons-logos/html-5";
+import javascriptIcon from "@iconify/icons-logos/javascript";
+import jqueryIcon from "@iconify/icons-logos/jquery";
+import reactIcon from "@iconify/icons-logos/react";
+import reduxIcon from "@iconify/icons-logos/redux";
+import sassIcon from "@iconify/icons-logos/sass";
+import typeScriptIcon from "@iconify/icons-logos/typescript-icon";
 
 const importedIcons = {
   apollostackIcon,
@@ -27,7 +27,7 @@ const importedIcons = {
   reduxIcon,
   sassIcon,
   typeScriptIcon,
-}
+};
 
 export const iconTypes = {
   apollo: "apollostackIcon",
@@ -41,7 +41,21 @@ export const iconTypes = {
   redux: "reduxIcon",
   sass: "sassIcon",
   typescript: "typeScriptIcon",
-}
+};
+
+const ariaLabels = {
+  apollo: "Apollo Client",
+  gatsby: "Gatsby",
+  git: "Git",
+  graphql: "Graph QL",
+  html: "HTML",
+  javascript: "JavaScript",
+  jquery: "jQuery",
+  react: "React",
+  redux: "Redux",
+  sass: "SASS",
+  typescript: "TypeScript",
+};
 
 const TechList = styled.ul`
   display: flex;
@@ -64,7 +78,7 @@ const TechList = styled.ul`
       margin: 1rem;
     }
   }
-`
+`;
 
 const TechListItem = styled.li`
   display: flex;
@@ -72,18 +86,21 @@ const TechListItem = styled.li`
   border: 50%;
   padding: 1rem;
   box-shadow: 0 16px 32px 0 rgba(55, 58, 75, 0.12);
-`
+`;
 
 const TechIcons = props => {
   return (
     <TechList tech={props.tech}>
       {props.tech.map(iconToUse => (
         <TechListItem key={iconToUse}>
-          <Icon icon={importedIcons[iconToUse]} />
+          <Icon
+            icon={importedIcons[iconToUse]}
+            aria-label={ariaLabels[iconToUse]}
+          />
         </TechListItem>
       ))}
     </TechList>
-  )
-}
+  );
+};
 
-export default TechIcons
+export default TechIcons;

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const MediaWidths = {
   mobileS: "320px",
@@ -7,7 +7,7 @@ export const MediaWidths = {
   tabletS: "600px",
   tabletL: "768px",
   laptop: "1024px",
-}
+};
 
 export const Container = styled.div`
   width: 85%;
@@ -17,7 +17,7 @@ export const Container = styled.div`
   @media (max-width: ${MediaWidths.tabletL}) {
     width: 90%;
   }
-`
+`;
 export const TextContainer = styled.div`
   width: 80%;
   max-width: 1350px;
@@ -26,7 +26,7 @@ export const TextContainer = styled.div`
   @media (max-width: ${MediaWidths.tabletL}) {
     width: 90%;
   }
-`
+`;
 
 export const SectionImage = styled.div`
   background-image: ${props => `url(${props.image})`};
@@ -44,7 +44,7 @@ export const SectionImage = styled.div`
   @media (max-width: ${MediaWidths.tabletS}) {
     height: 250px;
   }
-`
+`;
 
 export const SectionHeading = styled.h2`
   font-size: 1.5rem;
@@ -55,7 +55,7 @@ export const SectionHeading = styled.h2`
   @media (max-width: ${MediaWidths.mobileL}) {
     font-size: 1.3rem;
   }
-`
+`;
 
 export const Paragraph = styled.p`
   font-size: 0.8rem;
@@ -66,7 +66,7 @@ export const Paragraph = styled.p`
   &:last-of-type {
     margin-bottom: 0;
   }
-`
+`;
 
 export const LinkStyle = styled.span`
   font-size: 0.8rem;
@@ -82,14 +82,14 @@ export const LinkStyle = styled.span`
   &:focus {
     border-bottom: 2px solid #080808;
   }
-`
+`;
 
 export const PortfolioLinkContainer = styled.div`
   margin-top: 2rem;
 
   display: flex;
   align-items: center;
-`
+`;
 
 export const PortfolioLink = styled(LinkStyle)`
   display: block;
@@ -98,4 +98,4 @@ export const PortfolioLink = styled(LinkStyle)`
   &:first-of-type {
     margin-left: 0;
   }
-`
+`;

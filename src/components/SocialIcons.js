@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Icon } from "@iconify/react"
-import githubIcon from "@iconify/icons-fa-brands/github"
-import linkedinIn from "@iconify/icons-fa-brands/linkedin-in"
-import twitterIcon from "@iconify/icons-fa-brands/twitter"
+import React from "react";
+import styled from "styled-components";
+import { Icon } from "@iconify/react";
+import githubIcon from "@iconify/icons-fa-brands/github";
+import linkedinIn from "@iconify/icons-fa-brands/linkedin-in";
+import twitterIcon from "@iconify/icons-fa-brands/twitter";
 
 const IconContainer = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const IconContainer = styled.div`
   justify-content: ${props => (props.flexEnd ? "flex-end" : "flex-start")};
   align-items: center;
   margin-top: 1rem;
-`
+`;
 
 const IconSpan = styled.span`
   font-size: 1rem;
@@ -31,7 +31,7 @@ const IconSpan = styled.span`
   &:focus {
     transform: scale(1.2);
   }
-`
+`;
 
 const SocialIcons = props => {
   return (
@@ -42,7 +42,7 @@ const SocialIcons = props => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon icon={githubIcon} />
+          <Icon icon={githubIcon} aria-label="Go to GitHub" />
         </a>
       </IconSpan>
       <IconSpan>
@@ -51,7 +51,7 @@ const SocialIcons = props => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon icon={linkedinIn} />
+          <Icon icon={linkedinIn} aria-label="Go to LinkedIn" />
         </a>
       </IconSpan>
       <IconSpan>
@@ -60,11 +60,11 @@ const SocialIcons = props => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon icon={twitterIcon} />
+          <Icon icon={twitterIcon} aria-label="Go to Twitter" />
         </a>
       </IconSpan>
     </IconContainer>
-  )
-}
+  );
+};
 
-export default SocialIcons
+export default SocialIcons;

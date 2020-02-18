@@ -1,15 +1,15 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 import {
   TextContainer,
   SectionHeading,
   Paragraph,
   MediaWidths,
-} from "./SharedStyles"
+} from "./SharedStyles";
 
 const SkillsSection = styled.section`
   margin: 4rem 0 2rem;
-`
+`;
 
 const SkillsContainer = styled.div`
   font-size: 0.8rem;
@@ -23,17 +23,17 @@ const SkillsContainer = styled.div`
   @media (max-width: ${MediaWidths.tabletL}) {
     grid-template-columns: repeat(2, 1fr);
   }
-`
+`;
 
 const SkillsList = styled.ul`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-`
+`;
 
 const SkillsListItem = styled.li`
   margin: 1.5rem 0 0 1rem;
   list-style: circle;
-`
+`;
 
 const Skills = () => {
   return (
@@ -68,7 +68,7 @@ const Skills = () => {
         </SkillsContainer>
       </TextContainer>
     </SkillsSection>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

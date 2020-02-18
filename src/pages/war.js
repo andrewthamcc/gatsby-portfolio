@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import React from "react";
+import styled from "styled-components";
+import SEO from "../components/seo";
+import Layout from "../components/layout";
 import {
   Container,
   TextContainer,
@@ -10,15 +10,15 @@ import {
   PortfolioLinkContainer,
   PortfolioLink,
   MediaWidths,
-} from "../components/SharedStyles"
-import TechIcons, { iconTypes } from "../components/TechIcons"
+} from "../components/SharedStyles";
+import TechIcons, { iconTypes } from "../components/TechIcons";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const WarSection = styled.section`
   padding: 2rem 0;
-`
+`;
 
 const AppImages = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ const AppImages = styled.div`
 
     margin-top: 2rem;
   }
-`
+`;
 
 const AppImagesLeft = styled.div`
   width: 40%;
@@ -41,7 +41,7 @@ const AppImagesLeft = styled.div`
     width: 75%;
     margin: 1rem auto;
   }
-`
+`;
 
 const AppImagesRight = styled.div`
   width: 60%;
@@ -52,7 +52,7 @@ const AppImagesRight = styled.div`
     margin: 1rem 0;
     order: -1;
   }
-`
+`;
 
 const War = () => {
   const data = useStaticQuery(graphql`
@@ -86,7 +86,7 @@ const War = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -169,7 +169,7 @@ const War = () => {
         </TextContainer>
       </WarSection>
     </Layout>
-  )
-}
+  );
+};
 
-export default War
+export default War;

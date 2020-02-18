@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import styled, { keyframes } from "styled-components"
-import { Container } from "./SharedStyles"
-require("../index.css")
+import React from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import styled, { keyframes } from "styled-components";
+import { Container } from "./SharedStyles";
+require("../index.css");
 
 const FadeIn = keyframes`
   0%{
@@ -12,18 +12,18 @@ const FadeIn = keyframes`
   100%{
     opacity: 1;
   }
-`
+`;
 
 const LayoutDiv = styled.div`
   opacity: 0;
   animation: ${FadeIn} 0.6s 0.3s ease-in forwards;
-`
+`;
 
 const Header = styled.header`
   display: ${props => (props.none ? "none" : "block")};
   text-align: right;
   padding-top: 1.5rem;
-`
+`;
 
 const HomeLink = styled.span`
   background-color: #080808;
@@ -41,7 +41,7 @@ const HomeLink = styled.span`
   :hover {
     transform: scale(1.1);
   }
-`
+`;
 
 const Footer = styled.footer`
   background-color: #080808;
@@ -49,7 +49,7 @@ const Footer = styled.footer`
   padding: 0.25rem 0;
   font-size: 0.7rem;
   margin-top: 5rem;
-`
+`;
 
 const Layout = ({ children, none }) => {
   return (
@@ -68,11 +68,11 @@ const Layout = ({ children, none }) => {
         </Footer>
       </LayoutDiv>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

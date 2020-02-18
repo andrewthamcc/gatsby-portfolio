@@ -1,7 +1,7 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import PropTypes from "prop-types"
+import React from "react";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 function SEO({
   author,
@@ -30,7 +30,7 @@ function SEO({
         }
       }
     `
-  )
+  );
 
   return (
     <Helmet
@@ -98,7 +98,7 @@ function SEO({
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
@@ -111,7 +111,7 @@ SEO.defaultProps = {
   title: ``,
   twitterName: ``,
   url: ``,
-}
+};
 
 SEO.propTypes = {
   author: PropTypes.string.isRequired,
@@ -121,6 +121,6 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
   twitterName: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

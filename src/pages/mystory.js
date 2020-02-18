@@ -1,21 +1,21 @@
-import React from "react"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import styled from "styled-components"
+import React from "react";
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import styled from "styled-components";
 import {
   Container,
   TextContainer,
   SectionHeading,
   Paragraph,
   MediaWidths,
-} from "../components/SharedStyles"
+} from "../components/SharedStyles";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const StorySection = styled.section`
   padding-top: 2rem;
-`
+`;
 
 const StoryImageContainer = styled.div`
   height: 600px;
@@ -24,11 +24,11 @@ const StoryImageContainer = styled.div`
   @media (max-width: ${MediaWidths.tabletS}) {
     height: 400px;
   }
-`
+`;
 
 const StoryParagraph = styled(Paragraph)`
   margin-bottom: 2rem;
-`
+`;
 
 const Mystory = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +48,7 @@ const Mystory = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -111,7 +111,7 @@ const Mystory = () => {
         </TextContainer>
       </StorySection>
     </Layout>
-  )
-}
+  );
+};
 
-export default Mystory
+export default Mystory;

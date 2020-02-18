@@ -1,20 +1,20 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 import {
   TextContainer,
   SectionHeading,
   Paragraph,
   LinkStyle,
   MediaWidths,
-} from "./SharedStyles"
+} from "./SharedStyles";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const WorksSection = styled.section`
   padding: 2rem 0 4rem;
-`
+`;
 
 const WorkItemContainer = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ const WorkItemContainer = styled.div`
   @media (max-width: ${MediaWidths.mobileL}) {
     flex-direction: column;
   }
-`
+`;
 
 const WorkItem = styled.div`
   height: 20rem;
@@ -49,7 +49,7 @@ const WorkItem = styled.div`
     width: 100%;
     margin: 2rem 0;
   }
-`
+`;
 
 const WorkImageContainer = styled.div`
   box-shadow: 0 16px 32px 0 rgba(55, 58, 75, 0.12);
@@ -58,7 +58,7 @@ const WorkImageContainer = styled.div`
   &:hover {
     transform: scale(1.05);
   }
-`
+`;
 
 const WorkItemTitle = styled.h3`
   font-size: 1.2rem;
@@ -69,7 +69,7 @@ const WorkItemTitle = styled.h3`
   @media (max-width: ${MediaWidths.tabletL}) {
     font-size: 1rem;
   }
-`
+`;
 
 const Story = styled.div`
   margin: 2rem 0;
@@ -78,7 +78,7 @@ const Story = styled.div`
   @media (max-width: ${MediaWidths.tabletS}) {
     text-align: left;
   }
-`
+`;
 
 const StoryImage = styled.div`
   height: 400px;
@@ -86,7 +86,7 @@ const StoryImage = styled.div`
   @media (max-width: ${MediaWidths.tabletL}) {
     height: 250px;
   }
-`
+`;
 
 const Works = () => {
   const data = useStaticQuery(graphql`
@@ -127,7 +127,7 @@ const Works = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <WorksSection>
@@ -222,7 +222,7 @@ const Works = () => {
         </Story>
       </TextContainer>
     </WorksSection>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;

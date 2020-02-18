@@ -1,14 +1,13 @@
-import React, { useEffect } from "react"
-import styled from "styled-components"
-
+import React, { useEffect } from "react";
+import styled from "styled-components";
 import {
   Container,
   TextContainer,
   SectionImage,
   MediaWidths,
-} from "./SharedStyles"
-import SocialIcons from "./SocialIcons"
-import HeroImage from "../images/home/hero.jpg"
+} from "./SharedStyles";
+import SocialIcons from "./SocialIcons";
+import HeroImage from "../images/home/hero.jpg";
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -20,7 +19,7 @@ const HeroSection = styled.section`
   @media (max-width: ${MediaWidths.tabletL}) {
     height: auto;
   }
-`
+`;
 
 const HeroHeading = styled.h1`
   font-size: 3.5rem;
@@ -41,7 +40,7 @@ const HeroHeading = styled.h1`
   @media (max-width: ${MediaWidths.mobileL}) {
     font-size: 1.75rem;
   }
-`
+`;
 
 const Hero = () => {
   useEffect(() => {
@@ -52,10 +51,10 @@ const Hero = () => {
     #######  ###    #     #      #   #     
     #     #  #      #     #      #   #          
     #     #  #      #     #      #   #        
-    #     #  #####  ####  #####  #####`)
-    console.log("Built by Andrew Tham")
+    #     #  #####  ####  #####  #####`);
+    console.log("Built by Andrew Tham");
     // eslint-disable-next-line
-  }, [])
+  }, []);
 
   return (
     <HeroSection>
@@ -68,7 +67,7 @@ const Hero = () => {
         <SectionImage image={HeroImage} y={60} style={{ marginTop: "2rem" }} />
       </Container>
     </HeroSection>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

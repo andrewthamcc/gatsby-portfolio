@@ -1,15 +1,15 @@
-import React from "react"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import { Paragraph } from "../components/SharedStyles"
-import SEO from "../components/seo"
+import React from "react";
+import styled from "styled-components";
+import Layout from "../components/layout";
+import { Paragraph } from "../components/SharedStyles";
+import SEO from "../components/seo";
 
 const NotFondTitle = styled.h2`
   font-size: 3rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #080808;
-`
+`;
 
 const FullHeightContainer = styled.div`
   width: 85%;
@@ -19,7 +19,7 @@ const FullHeightContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
+`;
 
 const NotFoundPage = () => (
   <Layout>
@@ -29,6 +29,6 @@ const NotFoundPage = () => (
       <Paragraph>Uh Oh! That route that doesn&#39;t exist...</Paragraph>
     </FullHeightContainer>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

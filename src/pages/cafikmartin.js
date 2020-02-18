@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import React from "react";
+import styled from "styled-components";
+import SEO from "../components/seo";
+import Layout from "../components/layout";
 import {
   Container,
   TextContainer,
@@ -9,15 +9,15 @@ import {
   Paragraph,
   PortfolioLinkContainer,
   PortfolioLink,
-} from "../components/SharedStyles"
-import TechIcons, { iconTypes } from "../components/TechIcons"
+} from "../components/SharedStyles";
+import TechIcons, { iconTypes } from "../components/TechIcons";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const CafikMartinSection = styled.section`
   padding: 2rem 0;
-`
+`;
 
 const Cafikmartin = () => {
   const data = useStaticQuery(graphql`
@@ -30,7 +30,7 @@ const Cafikmartin = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -92,7 +92,7 @@ const Cafikmartin = () => {
         </TextContainer>
       </CafikMartinSection>
     </Layout>
-  )
-}
+  );
+};
 
-export default Cafikmartin
+export default Cafikmartin;

@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Hero from "../components/Hero"
-import Skills from "../components/Skills"
-import Works from "../components/Works"
-import SocialIcons from "../components/SocialIcons"
+import React from "react";
+import styled from "styled-components";
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import Hero from "../components/Hero";
+import Skills from "../components/Skills";
+import Works from "../components/Works";
+import SocialIcons from "../components/SocialIcons";
 import {
   SectionImage,
   Container,
@@ -13,17 +13,17 @@ import {
   Paragraph,
   SectionHeading,
   LinkStyle,
-} from "../components/SharedStyles"
-import SkillsImage from "../images/home/lagape.jpg"
-import ContactImage from "../images/home/contact.jpg"
+} from "../components/SharedStyles";
+import SkillsImage from "../images/home/lagape.jpg";
+import ContactImage from "../images/home/contact.jpg";
 
 const AboutSection = styled.section`
   margin-bottom: 4rem;
-`
+`;
 
 const ContactSection = styled.section`
   margin-top: 4rem;
-`
+`;
 
 const IndexPage = () => (
   <Layout none>
@@ -69,6 +69,6 @@ const IndexPage = () => (
       </TextContainer>
     </ContactSection>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

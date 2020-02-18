@@ -104,9 +104,9 @@ const Mystory = () => {
 
           <StoryParagraph>
             Even though I miss cooking professionally I haven't looked back to
-            professional kitchens. I've onlyl fallen more in love with
+            professional kitchens. I've only fallen more in love with
             programming and growing my career as a developer. I now just keep to
-            cooking at home for my wife, friends, family...
+            cooking at home for my friends and family...
           </StoryParagraph>
         </TextContainer>
       </StorySection>

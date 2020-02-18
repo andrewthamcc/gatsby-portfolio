@@ -26,7 +26,6 @@ const WorkItemContainer = styled.div`
 `;
 
 const WorkItem = styled.div`
-  height: 20rem;
   width: calc(50% - 3rem);
   margin: 2rem 3rem;
 
@@ -72,7 +71,7 @@ const WorkItemTitle = styled.h3`
 `;
 
 const Story = styled.div`
-  margin: 2rem 0;
+  margin: 4rem 0;
   text-align: center;
 
   @media (max-width: ${MediaWidths.tabletS}) {

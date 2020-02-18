@@ -3,29 +3,26 @@ html {
 }
 
 body {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
   font-family: "Montserrat", sans-serif;
   color: #080808;
 }
 
+body,
 h1,
 h2,
-p,
-ul {
+h3,
+ul,
+p {
   margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
 }
 
 a {
   color: #080808;
   text-decoration: none;
-}
-
-img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
 }

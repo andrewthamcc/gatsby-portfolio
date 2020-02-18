@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled, { keyframes } from "styled-components"
 import { Container } from "./SharedStyles"
+require("../index.css")
 
 const FadeIn = keyframes`
   0%{

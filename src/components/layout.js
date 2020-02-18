@@ -48,7 +48,7 @@ const Footer = styled.footer`
   color: #ffffff;
   padding: 0.25rem 0;
   font-size: 0.7rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
 `;
 
 const Layout = ({ children, none }) => {

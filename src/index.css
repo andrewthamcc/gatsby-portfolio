@@ -175,13 +175,13 @@ body {
   color: #080808;
 }
 
-body,
 h1,
 h2,
 h3,
 ul,
 p {
   margin: 0;
+  padding: 0;
 }
 
 a {

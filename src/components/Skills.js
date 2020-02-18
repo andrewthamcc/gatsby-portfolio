@@ -8,7 +8,7 @@ import {
 } from "./SharedStyles";
 
 const SkillsSection = styled.section`
-  margin: 4rem 0 2rem;
+  margin: 4rem 0;
 `;
 
 const SkillsContainer = styled.div`
@@ -35,7 +35,7 @@ const SkillsListItem = styled.li`
   list-style: circle;
 
   @media (max-width: ${MediaWidths.tabletL}) {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 `;
 

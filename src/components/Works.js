@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 const WorksSection = styled.section`
-  padding: 2rem 0 4rem;
+  margin: 4rem 0;
 `;
 
 const WorkItemContainer = styled.div`

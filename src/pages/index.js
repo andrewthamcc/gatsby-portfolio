@@ -18,11 +18,11 @@ import SkillsImage from "../images/home/lagape.jpg";
 import ContactImage from "../images/home/contact.jpg";
 
 const AboutSection = styled.section`
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 `;
 
 const ContactSection = styled.section`
-  margin-top: 4rem;
+  margin: 4rem 0;
 `;
 
 const IndexPage = () => (

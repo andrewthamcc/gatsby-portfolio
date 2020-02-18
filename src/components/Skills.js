@@ -33,6 +33,10 @@ const SkillsList = styled.ul`
 const SkillsListItem = styled.li`
   margin: 1.5rem 0 0 1rem;
   list-style: circle;
+
+  @media (max-width: ${MediaWidths.tabletL}) {
+    margin-left: 0;
+  }
 `;
 
 const Skills = () => {

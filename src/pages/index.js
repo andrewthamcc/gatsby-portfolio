@@ -41,7 +41,7 @@ const IndexPage = () => (
         </Paragraph>
         <Paragraph>
           I'm an adept problem solver, have a strong background of working in
-          teams, and enjoy challenge. I'm passionate about technology and using
+          teams, and enjoy challenges. I'm passionate about technology and using
           code to solve problems and to create and bring websites and web
           applications to life.
         </Paragraph>

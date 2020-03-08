@@ -1,3 +1,4 @@
+import BackgroundImage from "gatsby-background-image";
 import styled from "styled-components";
 
 export const MediaWidths = {
@@ -18,6 +19,7 @@ export const Container = styled.div`
     width: 90%;
   }
 `;
+
 export const TextContainer = styled.div`
   width: 80%;
   max-width: 1350px;
@@ -28,8 +30,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const SectionImage = styled.div`
-  background-image: ${props => `url(${props.image})`};
+export const SectionImage = styled(BackgroundImage)`
   filter: grayscale();
   background-size: cover;
   background-repeat: no-repeat;

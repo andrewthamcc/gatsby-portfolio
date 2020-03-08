@@ -41,6 +41,7 @@ const SocialIcons = props => {
           href="https://github.com/andrewthamcc"
           target="_blank"
           rel="noopener noreferrer"
+          title="GitHub"
         >
           <Icon icon={githubIcon} aria-label="Go to GitHub" />
         </a>
@@ -50,6 +51,7 @@ const SocialIcons = props => {
           href="https://linkedin.com/in/andrewthamcc"
           target="_blank"
           rel="noopener noreferrer"
+          title="LinkedIn"
         >
           <Icon icon={linkedinIn} aria-label="Go to LinkedIn" />
         </a>
@@ -59,6 +61,7 @@ const SocialIcons = props => {
           href="https://twitter.com/andrew_tham"
           target="_blank"
           rel="noopener noreferrer"
+          title="Twitter"
         >
           <Icon icon={twitterIcon} aria-label="Go to Twitter" />
         </a>

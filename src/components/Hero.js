@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import {
   Container,
@@ -56,6 +57,22 @@ const Hero = () => {
     // eslint-disable-next-line
   }, []);
 
+  const { hero } = useStaticQuery(
+    graphql`
+      query {
+        hero: file(relativePath: { eq: "home/hero.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 3000) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const imageData = hero.childImageSharp.fluid;
+
   return (
     <HeroSection>
       <TextContainer>
@@ -64,7 +81,7 @@ const Hero = () => {
       </TextContainer>
 
       <Container>
-        <SectionImage image={HeroImage} y={60} style={{ marginTop: "2rem" }} />
+        <SectionImage fluid={imageData} y={60} style={{ marginTop: "2rem" }} />
       </Container>
     </HeroSection>
   );

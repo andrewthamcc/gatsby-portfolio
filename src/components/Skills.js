@@ -62,11 +62,11 @@ const Skills = () => {
           <SkillsList>
             <SkillsListItem>React</SkillsListItem>
             <SkillsListItem>Redux</SkillsListItem>
-            <SkillsListItem>GraphQL</SkillsListItem>
+            <SkillsListItem>Gatsby</SkillsListItem>
           </SkillsList>
           <SkillsList>
+            <SkillsListItem>GraphQL</SkillsListItem>
             <SkillsListItem>Firebase</SkillsListItem>
-            <SkillsListItem>Styled-Components</SkillsListItem>
             <SkillsListItem>Git</SkillsListItem>
           </SkillsList>
         </SkillsContainer>

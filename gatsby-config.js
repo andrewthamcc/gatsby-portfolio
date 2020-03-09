@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: `Andrew Tham`,
     description: `Andrew Tham is a Toronto based frontend developer.`,
-    image: `https://github.com/andrewthamcc/gatsby-portfolio/blob/master/static/hero.jpg`,
+    image: `https://raw.githubusercontent.com/andrewthamcc/gatsby-portfolio/master/static/hero.jpg`,
     keywords: `web devloper, front end developer, web dev, dev, portfolio, toronto, andrew tham, frontend developer, frontend`,
     title: `Andrew Tham`,
     twitterName: `@Andrew_Tham`,

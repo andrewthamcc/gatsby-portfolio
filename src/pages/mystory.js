@@ -77,11 +77,10 @@ const Mystory = () => {
           </StoryParagraph>
 
           <StoryParagraph>
-            I decided to attend Juno College (formerly HackerYou) after a close
-            friend of mine had completed their program and found employment as a
-            Frontend Developer in Toronto. I also had the opportunity to work in
-            tech startups and found myself interested in the work the developers
-            were doing.
+            I decided to attend Juno College after a close friend of mine had
+            completed their program and found employment as a Frontend Developer
+            in Toronto. I also had the opportunity to work in tech startups and
+            found myself interested in the work the developers were doing.
           </StoryParagraph>
 
           <StoryParagraph>

@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import githubIcon from "@iconify/icons-fa-brands/github";
 import linkedinIn from "@iconify/icons-fa-brands/linkedin-in";
 import twitterIcon from "@iconify/icons-fa-brands/twitter";
+import mediumM from "@iconify/icons-fa-brands/medium-m";
 
 const IconContainer = styled.div`
   display: flex;
@@ -54,6 +55,16 @@ const SocialIcons = props => {
           title="LinkedIn"
         >
           <Icon icon={linkedinIn} aria-label="Go to LinkedIn" />
+        </a>
+      </IconSpan>
+      <IconSpan>
+        <a
+          href="https://medium.com/@andrew.tham.cc"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Medium"
+        >
+          <Icon icon={mediumM} aria-label="Go to Medium" />
         </a>
       </IconSpan>
       <IconSpan>

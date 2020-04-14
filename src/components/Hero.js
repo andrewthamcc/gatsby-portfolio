@@ -8,7 +8,6 @@ import {
   MediaWidths,
 } from "./SharedStyles";
 import SocialIcons from "./SocialIcons";
-import HeroImage from "../images/home/hero.jpg";
 
 const HeroSection = styled.section`
   height: 100vh;

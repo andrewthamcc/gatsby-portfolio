@@ -56,12 +56,12 @@ const IndexPage = () => {
       <AboutSection>
         <TextContainer>
           <Paragraph>
-            I'm a front end developer based in Toronto, Canada. I graduated from
-            The University of Toronto with a degree in Physics after which I
-            trained and worked as a Chef. I've opened a national test kitchen
-            for Sobeys Inc., cooked in fine dining restaurants in Melbourne,
-            Australia, headed kitchens in Toronto, and have been a part of food
-            focused technology startups.
+            I'm a developer based in Toronto, Canada. I graduated from The
+            University of Toronto with a degree in Physics after which I trained
+            and worked as a Chef. I've opened a national test kitchen for Sobeys
+            Inc., cooked in fine dining restaurants in Melbourne, Australia,
+            headed kitchens in Toronto, and have been a part of food focused
+            technology startups.
           </Paragraph>
           <Paragraph>
             I'm an adept problem solver, have a strong background of working in

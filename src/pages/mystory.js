@@ -85,28 +85,28 @@ const Mystory = () => {
 
           <StoryParagraph>
             I've always had a fondness and curiosity for the web since I was
-            young teenager learning HTML in the early days of the internet. I
-            have also always enjoyed programming; I studied computer programming
-            through highschool learning Visual Basic and Java and At The
-            University of Toronto I studied Physics and had courses where we
-            programmed with Python. I've applied my programming knowledge during
-            my studies in various different courses and have also had the
-            opportunity to write small bits of code to help my job as a Chef.
+            teenager learning HTML in the early days of the internet. I have
+            always enjoyed programming; I studied computer programming through
+            highschool learning Visual Basic and Java and At The University of
+            Toronto I studied Physics and had courses programming with Python.
+            I've applied my programming knowledge during my studies in various
+            courses and have also had the opportunity to write small bits of
+            code to help my job as a Chef.
           </StoryParagraph>
 
           <StoryParagraph>
             With a background in the sciences and a familiarity with programming
-            basics I enrolled into the part time program at Juno College in
-            November 2018 and was admitted to their 8-Week immersive program in
-            April 2019.
+            basics I enrolled in the part time continuing education web dev
+            program at Juno College in November 2018 and was later admitted to
+            their 8-Week immersive program in April 2019.
           </StoryParagraph>
 
-          <StoryParagraph>
+          {/* <StoryParagraph>
             Even though I miss cooking professionally I haven't looked back to
             professional kitchens. I've only fallen more in love with
             programming and growing my career as a developer. I now just keep to
             cooking at home for my friends and family...
-          </StoryParagraph>
+          </StoryParagraph> */}
         </TextContainer>
       </StorySection>
     </Layout>

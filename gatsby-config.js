@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     author: `Andrew Tham`,
-    description: `Andrew Tham is a Toronto based developer.`,
+    description: `Website of Toronto based developer Andrew Tham.`,
     image: `https://raw.githubusercontent.com/andrewthamcc/gatsby-portfolio/master/static/hero.jpg`,
-    keywords: `web devloper, front end developer, web dev, dev, portfolio, toronto, andrew tham, frontend developer, frontend, javascript, html, css, react developer, react`,
+    keywords: `web devloper, web dev, developer, dev, portfolio, toronto, andrew tham, tham, frontend developer, frontend, javascript, html, css, react developer, react, node`,
     title: `Andrew Tham`,
     twitterName: `@Andrew_Tham`,
     url: `http://andrewtham.cc`,

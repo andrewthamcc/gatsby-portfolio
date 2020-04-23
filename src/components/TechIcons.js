@@ -4,12 +4,16 @@ import { Icon } from "@iconify/react";
 import { MediaWidths } from "./SharedStyles";
 
 import apollostackIcon from "@iconify/icons-logos/apollostack";
+import expressIcon from "@iconify/icons-logos/express";
 import gatsbyIcon from "@iconify/icons-logos/gatsby";
 import gitIcon from "@iconify/icons-logos/git-icon";
 import graphqlIcon from "@iconify/icons-logos/graphql";
+import herokuIcon from "@iconify/icons-logos/heroku-icon";
 import html5 from "@iconify/icons-logos/html-5";
 import javascriptIcon from "@iconify/icons-logos/javascript";
 import jqueryIcon from "@iconify/icons-logos/jquery";
+import mongodbIcon from "@iconify/icons-logos/mongodb";
+import nodejsIcon from "@iconify/icons-logos/nodejs-icon";
 import reactIcon from "@iconify/icons-logos/react";
 import reduxIcon from "@iconify/icons-logos/redux";
 import sassIcon from "@iconify/icons-logos/sass";
@@ -17,12 +21,16 @@ import typeScriptIcon from "@iconify/icons-logos/typescript-icon";
 
 const importedIcons = {
   apollostackIcon,
+  expressIcon,
   gitIcon,
   gatsbyIcon,
   graphqlIcon,
+  herokuIcon,
   html5,
   javascriptIcon,
   jqueryIcon,
+  mongodbIcon,
+  nodejsIcon,
   reactIcon,
   reduxIcon,
   sassIcon,
@@ -31,12 +39,16 @@ const importedIcons = {
 
 export const iconTypes = {
   apollo: "apollostackIcon",
+  express: "expressIcon",
   gatsby: "gatsbyIcon",
   git: "gitIcon",
   graphql: "graphqlIcon",
+  heroku: "herokuIcon",
   html: "html5",
   javascript: "javascriptIcon",
   jquery: "jqueryIcon",
+  mongodb: "mongodbIcon",
+  nodejs: "nodejsIcon",
   react: "reactIcon",
   redux: "reduxIcon",
   sass: "sassIcon",
@@ -62,11 +74,12 @@ const TechList = styled.ul`
   justify-content: ${props =>
     props.tech.length > 3 ? "space-around" : "center"};
   align-items: center;
+  flex-wrap: wrap;
   margin: 4rem 0;
   font-size: 2rem;
 
   li {
-    margin: ${props => (props.tech.length <= 3 ? "0 1rem" : "0")};
+    margin: ${props => (props.tech.length <= 4 ? "0 1rem" : "1rem")};
   }
 
   @media (max-width: ${MediaWidths.tabletS}) {

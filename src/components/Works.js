@@ -97,6 +97,15 @@ const Works = () => {
           }
         }
       }
+      marcherunner: file(
+        relativePath: { eq: "marcherunner/marcherunner.png" }
+      ) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       lcm: file(relativePath: { eq: "lcm.png" }) {
         childImageSharp {
           fluid(quality: 100) {
@@ -152,6 +161,19 @@ const Works = () => {
           </WorkItem>
 
           <WorkItem>
+            <Link to="/marcherunner">
+              <WorkImageContainer>
+                <Img fluid={data.marcherunner.childImageSharp.fluid} />
+              </WorkImageContainer>
+            </Link>
+            <WorkItemTitle>MarchéRunner</WorkItemTitle>
+            <Paragraph>Fullstack MERN web application.</Paragraph>
+            <Link to="/marcherunner">
+              <LinkStyle>View Project</LinkStyle>
+            </Link>
+          </WorkItem>
+
+          <WorkItem>
             <Link to="/cafikmartin">
               <WorkImageContainer>
                 <Img fluid={data.lcm.childImageSharp.fluid} />
@@ -167,7 +189,7 @@ const Works = () => {
             </Link>
           </WorkItem>
 
-          <WorkItem>
+          {/* <WorkItem>
             <Link to="/bikewatch">
               <WorkImageContainer>
                 <Img fluid={data.bikewatch.childImageSharp.fluid} />
@@ -181,7 +203,7 @@ const Works = () => {
             <Link to="/bikewatch">
               <LinkStyle>View Project</LinkStyle>
             </Link>
-          </WorkItem>
+          </WorkItem> */}
 
           <WorkItem>
             <Link to="/war">

@@ -5,6 +5,7 @@ import { MediaWidths } from "./SharedStyles";
 
 import apollostackIcon from "@iconify/icons-logos/apollostack";
 import expressIcon from "@iconify/icons-logos/express";
+import firebaseIcon from '@iconify/icons-logos/firebase';
 import gatsbyIcon from "@iconify/icons-logos/gatsby";
 import gitIcon from "@iconify/icons-logos/git-icon";
 import graphqlIcon from "@iconify/icons-logos/graphql";
@@ -22,6 +23,7 @@ import typeScriptIcon from "@iconify/icons-logos/typescript-icon";
 const importedIcons = {
   apollostackIcon,
   expressIcon,
+  firebaseIcon,
   gitIcon,
   gatsbyIcon,
   graphqlIcon,
@@ -40,6 +42,7 @@ const importedIcons = {
 export const iconTypes = {
   apollo: "apollostackIcon",
   express: "expressIcon",
+  firebase: "firebaseIcon",
   gatsby: "gatsbyIcon",
   git: "gitIcon",
   graphql: "graphqlIcon",
@@ -57,12 +60,17 @@ export const iconTypes = {
 
 const ariaLabels = {
   apollo: "Apollo Client",
+  express: "Express",
+  firebase: "Firebase",
   gatsby: "Gatsby",
   git: "Git",
   graphql: "Graph QL",
+  heroku: "Heroku",
   html: "HTML",
   javascript: "JavaScript",
   jquery: "jQuery",
+  mongodb: "MongoDB",
+  nodejs: "Node JS",
   react: "React",
   redux: "Redux",
   sass: "SASS",

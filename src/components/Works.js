@@ -106,7 +106,7 @@ const Works = () => {
           }
         }
       }
-      lcm: file(relativePath: { eq: "lcm.png" }) {
+      lcm: file(relativePath: { eq: "lcm/lcm.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid

@@ -9,6 +9,7 @@ import {
   Paragraph,
   PortfolioLinkContainer,
   PortfolioLink,
+  MediaWidths,
 } from "../components/SharedStyles";
 import TechIcons, { iconTypes } from "../components/TechIcons";
 
@@ -19,10 +20,59 @@ const CafikMartinSection = styled.section`
   padding: 2rem 0;
 `;
 
+const AppImages = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2rem;
+  }
+`;
+
+const AppImagesLeft = styled.div`
+  width: 40%;
+  margin-right: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 75%;
+    margin: 1rem auto;
+  }
+`;
+
+const AppImagesRight = styled.div`
+  width: 60%;
+  margin-left: 1rem;
+
+  @media (max-width: ${MediaWidths.tabletS}) {
+    width: 100%;
+    margin: 1rem 0;
+    order: -1;
+  }
+`;
+
 const Cafikmartin = () => {
   const data = useStaticQuery(graphql`
     query {
-      lcmCoaching: file(relativePath: { eq: "lcm.png" }) {
+      lcmCoaching: file(relativePath: { eq: "lcm/lcm.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      lcmLogin: file(relativePath: { eq: "lcm/lcm-login.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      lcmPage: file(relativePath: { eq: "lcm/lcm-full.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -44,13 +94,13 @@ const Cafikmartin = () => {
             information.
           </Paragraph>
           <PortfolioLinkContainer>
-            <a
+            {/* <a
               href="https://github.com/andrewthamcc/LCM-coaching"
               target="_blank"
               rel="noopener noreferrer"
             >
               <PortfolioLink>View Repository</PortfolioLink>
-            </a>
+            </a> */}
             <a
               href="http://cafikmartincoaching.com"
               target="_blank"
@@ -73,22 +123,38 @@ const Cafikmartin = () => {
         </Container>
         <TextContainer>
           <Paragraph>
-            Lauara's website is a three page static site. The biggest challenge
-            with creating this website was interpreting Laura's aesthetic
-            desires and translating them into a design. I do not have a strong
-            design background or skills but felt like we were able to acheive
-            her goal of vibrant colours on a dark background and keeping it
-            simple with easy to access information.
+            I had built a website for Laura in 2019 fresh out of web development bootcamp. The website was a very simple three page static build written with HTML, SCSS and some JavaScript. A year later Laura approached me with plans to expand on her website to include a section where she could launch her online mentoring and coaching program. We also took this opportunity to redesign her page and update the codebase to utilize a static site generator.
+          </Paragraph>
+          <Paragraph>
+            The challenge to this update was building out a client portal that included authentication and tracked user progress through the course. Not wanting to build out a database server I turned to Firebase which could easily handle both authentication and provided a simple database. Another benefit of Firebase is its good documentation, large user base, and Gatsby also has good documentation on usage and interaction with Firebase. Firebase's console panel also allows for multiple users and is user friendly and simple enough for Laura to add new users and view their progress on her own.
           </Paragraph>
           <TechIcons
-            tech={[iconTypes.html, iconTypes.sass, iconTypes.javascript]}
+            tech={[iconTypes.gatsby, iconTypes.firebase, iconTypes.sass]}
           />
           <Paragraph>
-            In the future we will continue to expand on Laura's website adding
-            links to her various content outlets and possibly a blog page. With
-            these changes I would also ideally like to translate her site to
-            Gatsby with Styled-Components.
+            In the future we will continue to expand on Laura's website adding a Blog by connected to a CMS such as Contentful or Strapi.
           </Paragraph>
+
+          <AppImages>
+            <AppImagesLeft>
+              <Img
+                fluid={data.lcmLogin.childImageSharp.fluid}
+                style={{
+                  boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
+                }}
+              />
+            </AppImagesLeft>
+
+            <AppImagesRight>
+              <Img
+                fluid={data.lcmPage.childImageSharp.fluid}
+                style={{
+                  boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
+                  marginBottom: "2rem",
+                }}
+              />
+            </AppImagesRight>
+          </AppImages>
         </TextContainer>
       </CafikMartinSection>
     </Layout>

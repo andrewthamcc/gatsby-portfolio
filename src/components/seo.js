@@ -43,6 +43,8 @@ function SEO({ lang, title, description, image }) {
     url,
   };
 
+  console.log(seo);
+
   return (
     <Helmet
       htmlAttributes={{
@@ -62,6 +64,10 @@ function SEO({ lang, title, description, image }) {
         {
           name: `keywords`,
           content: seo.keywords,
+        },
+        {
+          name: `image`,
+          content: seo.image,
         },
         {
           property: `og:title`,

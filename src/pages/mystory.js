@@ -35,14 +35,7 @@ const Mystory = () => {
     query {
       rousillon: file(relativePath: { eq: "story/rousillon.jpg" }) {
         childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      python: file(relativePath: { eq: "story/python.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -68,27 +61,33 @@ const Mystory = () => {
         </Container>
         <TextContainer>
           <StoryParagraph>
-            In 2019 I decided to leave the hospitality industry. While I had
-            succeeded and climbed the ladder of professional kitchens I could no
-            longer ignore the growing income disparity, lack of employee rights
-            and proper employment practices, and new restaurants more often
-            being driven by social media influence and sales over quality of
-            food and service.
-          </StoryParagraph>
-
-          <StoryParagraph>
-            I decided to attend Juno College after a close friend of mine had
-            completed their program and found employment as a Frontend Developer
-            in Toronto. I also had the opportunity to work in tech startups and
-            found myself interested in the work the developers were doing.
-          </StoryParagraph>
-
-          <StoryParagraph>
             I've always had a fondness and curiosity for the web since I was
-            teenager learning HTML in the early days of the internet. I have
-            always enjoyed programming; I studied computer programming through
-            highschool learning Visual Basic and Java and At The University of
-            Toronto I studied Physics and had courses programming with Python.
+            teenager learning HTML in the early days of the internet. I've also
+            always enjoyed programming and studied the sciences throughout
+            highschool and then continued onwards to post-secondary where I
+            completed a degree in Physics at The University of Toronto.
+          </StoryParagraph>
+
+          <StoryParagraph>
+            After University I decided to pursue the childhood dream of becoming
+            a Chef. I've been lucky and privileged enough to work and travel as
+            a Chef and have lead kitchens in both Toronto and abroad. I have
+            experience in fine dining kitchens, corporate food development, and
+            food-tech start ups. I've cooked 12 course tasting menu dinners,
+            slung lettuce wraps at street festivals, been part of a team
+            resolving one of the largest Canadian food recalls, and more.
+          </StoryParagraph>
+
+          <StoryParagraph>
+            After working as a Chef for a decade I decided to leave the
+            hospitality industry in 2019. While I had succeeded and climbed the
+            ladder of professional kitchens I could no longer ignore the growing
+            income disparity, lack of employee rights and proper employment
+            practices, and restaurants often being fixated on and driven by
+            social media influence over quality of food and service.
+          </StoryParagraph>
+
+          <StoryParagraph>
             I've applied my programming knowledge during my studies in various
             courses and have also had the opportunity to write small bits of
             code to help my job as a Chef.
@@ -96,17 +95,17 @@ const Mystory = () => {
 
           <StoryParagraph>
             With a background in the sciences and a familiarity with programming
-            basics I enrolled in the part time continuing education web dev
-            program at Juno College in November 2018 and was later admitted to
-            their 8-Week immersive program in April 2019.
+            basics I enrolled in the part time continuing education web
+            development program at Juno College in November 2018 and was later
+            admitted to their 8-Week immersive program in April 2019.
           </StoryParagraph>
 
-          {/* <StoryParagraph>
+          <StoryParagraph>
             Even though I miss cooking professionally I haven't looked back to
-            professional kitchens. I've only fallen more in love with
-            programming and growing my career as a developer. I now just keep to
-            cooking at home for my friends and family...
-          </StoryParagraph> */}
+            restaurant kitchens. I've only fallen more in love with programming
+            and am dedicated to growing my career as a developer. I now just
+            keep to cooking at home for friends and family.
+          </StoryParagraph>
         </TextContainer>
       </StorySection>
     </Layout>

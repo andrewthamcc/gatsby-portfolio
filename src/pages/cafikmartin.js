@@ -72,6 +72,13 @@ const Cafikmartin = () => {
           }
         }
       }
+      lcmModules: file(relativePath: { eq: "lcm/lcm-modules.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       lcmPage: file(relativePath: { eq: "lcm/lcm-full.png" }) {
         childImageSharp {
           fluid(quality: 100) {
@@ -160,7 +167,7 @@ const Cafikmartin = () => {
           <AppImages>
             <AppImagesLeft>
               <Img
-                fluid={data.lcmLogin.childImageSharp.fluid}
+                fluid={data.lcmPage.childImageSharp.fluid}
                 style={{
                   boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
                 }}
@@ -169,7 +176,14 @@ const Cafikmartin = () => {
 
             <AppImagesRight>
               <Img
-                fluid={data.lcmPage.childImageSharp.fluid}
+                fluid={data.lcmLogin.childImageSharp.fluid}
+                style={{
+                  boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
+                  marginBottom: "2rem",
+                }}
+              />
+              <Img
+                fluid={data.lcmModules.childImageSharp.fluid}
                 style={{
                   boxShadow: "0 16px 32px 0 rgba(55,58,75,.12)",
                   marginBottom: "2rem",

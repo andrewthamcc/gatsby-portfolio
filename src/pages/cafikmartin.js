@@ -123,16 +123,38 @@ const Cafikmartin = () => {
         </Container>
         <TextContainer>
           <Paragraph>
-            I had built a website for Laura in 2019 fresh out of web development bootcamp. The website was a very simple three page static build written with HTML, SCSS and some JavaScript. A year later Laura approached me with plans to expand on her website to include a section where she could launch her online mentoring and coaching program. We also took this opportunity to redesign her page and update the codebase to utilize a static site generator.
+            I had built a website for Laura in 2019 fresh out of web development
+            bootcamp. The website was a very simple three page static build
+            written with HTML, SCSS and some JavaScript. A year later Laura
+            approached me with plans to expand on her website to include a
+            section where she could launch her online mentoring and coaching
+            program. We also took this opportunity to redesign her page and
+            update the codebase to utilize a static site generator.
           </Paragraph>
           <Paragraph>
-            The challenge to this update was building out a client portal that included authentication and tracked user progress through the course. Not wanting to build out a database server I turned to Firebase which could easily handle both authentication and provided a simple database. Another benefit of Firebase is its good documentation, large user base, and Gatsby also has good documentation on usage and interaction with Firebase. Firebase's console panel also allows for multiple users and is user friendly and simple enough for Laura to add new users and view their progress on her own.
+            The challenge to this update was building out a client portal that
+            included authentication and tracked user progress through the
+            course. Not wanting to build out a database or dedicated server I
+            turned to Firebase which provided a simple database and could handle
+            secure user authentication. Firebase's console panel also allows for
+            multiple users and is user friendly and simple enough for Laura to
+            understand and use on her own.
           </Paragraph>
+
+          <Paragraph>
+            Another benefit of Firebase are its good documentation and large
+            userbase. Gatsby also has good documentation on usage and
+            interaction with Firebase on their official documentation.
+          </Paragraph>
+
           <TechIcons
             tech={[iconTypes.gatsby, iconTypes.firebase, iconTypes.sass]}
           />
           <Paragraph>
-            In the future we will continue to expand on Laura's website adding a Blog by connected to a CMS such as Contentful or Strapi.
+            With this build I was able to flex and improve on my design and UX
+            skills and create an interesting Fullstack type project. In the
+            future we will continue to expand on Laura's website adding a Blog
+            by connected to a CMS such as Contentful or Strapi.
           </Paragraph>
 
           <AppImages>

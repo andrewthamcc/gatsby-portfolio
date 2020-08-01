@@ -3,74 +3,85 @@ import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 
-function SEO({
-  author,
-  description,
-  image,
-  keywords,
-  lang,
-  meta,
-  title,
-  twitterName,
-  url,
-}) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            author
-            description
-            image
-            keywords
-            title
-            twitterName
-            url
-          }
-        }
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+        defaultDescription: description
+        defaultImage: image
+        keywords
+        defaultTitle: title
+        twitterUserName
+        url
       }
-    `
-  );
+    }
+  }
+`;
+
+function SEO({ lang, title, description, image }) {
+  const { site } = useStaticQuery(query);
+
+  const {
+    author,
+    defaultDescription,
+    defaultImage,
+    keywords,
+    defaultTitle,
+    twitterUserName,
+    url,
+  } = site.siteMetadata;
+
+  const seo = {
+    lang,
+    author,
+    description: description || defaultDescription,
+    image: image || defaultImage,
+    keywords,
+    title: title || defaultTitle,
+    twitterUserName,
+    url,
+  };
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: seo.lang,
       }}
-      title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
+      title={seo.title}
+      titleTemplate={`${defaultTitle} | %s`}
       meta={[
         {
           name: `author`,
-          content: site.siteMetadata.author,
+          content: seo.author,
         },
         {
           name: `description`,
-          content: site.siteMetadata.description,
+          content: seo.description,
         },
         {
           name: `keywords`,
-          content: site.siteMetadata.keywords,
+          content: seo.keywords,
         },
         {
           property: `og:title`,
-          content: site.siteMetadata.title,
+          content: seo.title,
         },
         {
           property: `og:content`,
-          content: site.siteMetadata.description,
+          content: seo.description,
         },
         {
           property: `og:description`,
-          content: site.siteMetadata.description,
+          content: seo.description,
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.url,
+          content: seo.url,
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.image,
+          content: seo.image,
         },
         {
           property: `og:type`,
@@ -81,46 +92,38 @@ function SEO({
           content: `summary_large_image`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          name: `twitter:title`,
+          content: seo.title,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.twitterName,
+          content: seo.twitterUserName,
         },
         {
           name: `twitter:description`,
-          content: site.siteMetadata.description,
+          content: seo.description,
         },
         {
-          name: `twitter:url`,
-          content: site.siteMetadata.url,
+          name: `twitter:image`,
+          content: seo.image,
         },
-      ].concat(meta)}
+      ]}
     />
   );
 }
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  author: `Andrew Tham`,
-  description: `Andrew Tham is a Toronto based developer.`,
-  image: ``,
-  keywords: ``,
-  title: ``,
-  twitterName: ``,
-  url: ``,
+  title: "",
+  description: null,
+  image: null,
 };
 
 SEO.propTypes = {
-  author: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  keywords: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  twitterName: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  lang: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default SEO;

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
@@ -30,14 +30,14 @@ const IndexPage = () => {
       query {
         skills: file(relativePath: { eq: "home/lagape.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 3000) {
+            fluid(quality: 100, maxWidth: 1500) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         contact: file(relativePath: { eq: "home/contact.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 3000) {
+            fluid(quality: 100, maxWidth: 1500) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

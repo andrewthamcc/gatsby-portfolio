@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     author: `Andrew Tham`,
-    description: `Website of Toronto based developer Andrew Tham.`,
-    image: `seo.png`,
+    description: `Portfolio of Toronto based developer Andrew Tham.`,
+    image: `./seo.png`,
     keywords: `web devloper, web dev, developer, dev, portfolio, toronto, andrew tham, tham, frontend developer, frontend, javascript, html, css, react developer, react, node`,
     title: `Andrew Tham`,
-    twitterName: `@Andrew_Tham`,
+    twitterUserName: `@Andrew_Tham`,
     url: `http://andrewtham.cc`,
   },
   plugins: [

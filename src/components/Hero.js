@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useStaticQuery } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import {
   Container,
@@ -61,7 +61,7 @@ const Hero = () => {
       query {
         hero: file(relativePath: { eq: "home/hero.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 3000) {
+            fluid(quality: 100, maxWidth: 1500) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

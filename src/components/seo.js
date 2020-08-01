@@ -70,7 +70,7 @@ function SEO({ title, description, image }) {
 SEO.defaultProps = {
   title: "",
   description: null,
-  image: null,
+  image: "https://andrewtham.cc/seo.png",
 };
 
 SEO.propTypes = {

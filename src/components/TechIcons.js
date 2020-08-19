@@ -5,7 +5,7 @@ import { MediaWidths } from "./SharedStyles";
 
 import apollostackIcon from "@iconify/icons-logos/apollostack";
 import expressIcon from "@iconify/icons-logos/express";
-import firebaseIcon from '@iconify/icons-logos/firebase';
+import firebaseIcon from "@iconify/icons-logos/firebase";
 import gatsbyIcon from "@iconify/icons-logos/gatsby";
 import gitIcon from "@iconify/icons-logos/git-icon";
 import graphqlIcon from "@iconify/icons-logos/graphql";
@@ -13,6 +13,7 @@ import herokuIcon from "@iconify/icons-logos/heroku-icon";
 import html5 from "@iconify/icons-logos/html-5";
 import javascriptIcon from "@iconify/icons-logos/javascript";
 import jqueryIcon from "@iconify/icons-logos/jquery";
+import materialUi from "@iconify/icons-logos/material-ui";
 import mongodbIcon from "@iconify/icons-logos/mongodb";
 import nodejsIcon from "@iconify/icons-logos/nodejs-icon";
 import reactIcon from "@iconify/icons-logos/react";
@@ -31,6 +32,7 @@ const importedIcons = {
   html5,
   javascriptIcon,
   jqueryIcon,
+  materialUi,
   mongodbIcon,
   nodejsIcon,
   reactIcon,
@@ -50,6 +52,7 @@ export const iconTypes = {
   html: "html5",
   javascript: "javascriptIcon",
   jquery: "jqueryIcon",
+  materialUI: "materialUi",
   mongodb: "mongodbIcon",
   nodejs: "nodejsIcon",
   react: "reactIcon",

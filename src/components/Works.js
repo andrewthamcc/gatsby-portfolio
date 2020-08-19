@@ -181,8 +181,8 @@ const Works = () => {
             </Link>
             <WorkItemTitle>Cafik-Martin Coaching</WorkItemTitle>
             <Paragraph>
-              Static website designed, built, and deployed for Orthodontic
-              Speaker Laura Cafik-Martin.
+              Website with secure client portal designed, built, and deployed
+              for Orthodontic Speaker and Coach Laura Cafik-Martin.
             </Paragraph>
             <Link to="/cafikmartin">
               <LinkStyle>View Project</LinkStyle>

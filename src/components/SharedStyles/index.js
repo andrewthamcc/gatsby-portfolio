@@ -36,7 +36,7 @@ export const SectionImage = styled(BackgroundImage)`
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: ${props => `${props.y}%`};
-  height: 400px;
+  height: 450px;
   margin: 4rem 0;
 
   @media (max-width: ${MediaWidths.tabletL}) {

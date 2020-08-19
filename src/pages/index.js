@@ -77,7 +77,7 @@ const IndexPage = () => {
       <Skills />
       <Works />
       <Container>
-        <SectionImage fluid={imageContactData} y={70} />
+        <SectionImage fluid={imageContactData} y={40} />
       </Container>
       <ContactSection>
         <TextContainer>

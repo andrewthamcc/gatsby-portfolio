@@ -8,6 +8,7 @@ import {
   TextContainer,
   SectionHeading,
   Paragraph,
+  LinkStyle,
 } from "../components/SharedStyles";
 import TechIcons, { iconTypes } from "../components/TechIcons";
 
@@ -48,18 +49,26 @@ const SmoothSolutions = () => {
           <SectionHeading>Working at Smooth Solutions</SectionHeading>
           <Paragraph>
             I was offered an extension after my internship at{" "}
-            <Link to="/perpetua">Perpetua/Draper AI</Link> ended but I took it
-            as an opportunity to search for different experiences wanting to see
-            and work with different teams.
+            <LinkStyle>
+              <Link to="/perpetua">Perpetua/Draper AI</Link>
+            </LinkStyle>{" "}
+            ended but I took it as an opportunity to search for different
+            experiences wanting to see and work with different teams.
           </Paragraph>
 
           <Paragraph>
             In May 2020 I landed a position as a Frontend Software Developer at
             Smooth Solutions. The company is the outsourced development workshop
             for the non-profit energy conservation company{" "}
-            <a href="https://greensaver.org/" target="_blank">
-              Greensaver
-            </a>
+            <LinkStyle>
+              <a
+                href="https://greensaver.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Greensaver
+              </a>
+            </LinkStyle>
             . Smooth Solutions was digitizing GreenSaver and moving their
             scheduling processses and pen and paper audits to a web application.
           </Paragraph>

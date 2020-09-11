@@ -53,19 +53,19 @@ const Skills = () => {
             <SkillsListItem>HTML5</SkillsListItem>
             <SkillsListItem>CSS3</SkillsListItem>
             <SkillsListItem>SASS</SkillsListItem>
-            <SkillsListItem>Styled Components</SkillsListItem>
+            <SkillsListItem>JavaScript</SkillsListItem>
           </SkillsList>
           <SkillsList>
-            <SkillsListItem>JavaScript</SkillsListItem>
-            <SkillsListItem>jQuery</SkillsListItem>
-            <SkillsListItem>TypeScript</SkillsListItem>
+            <SkillsListItem>Jest</SkillsListItem>
             <SkillsListItem>NodeJS</SkillsListItem>
+            <SkillsListItem>TypeScript</SkillsListItem>
+            <SkillsListItem>jQuery</SkillsListItem>
           </SkillsList>
           <SkillsList>
             <SkillsListItem>React</SkillsListItem>
             <SkillsListItem>Redux</SkillsListItem>
             <SkillsListItem>Gatsby</SkillsListItem>
-            <SkillsListItem>GraphQL</SkillsListItem>
+            <SkillsListItem>GraphQL/Apollo Client</SkillsListItem>
           </SkillsList>
           <SkillsList>
             <SkillsListItem>Git</SkillsListItem>

@@ -90,6 +90,13 @@ const StoryImage = styled.div`
 const Works = () => {
   const data = useStaticQuery(graphql`
     query {
+      smoothSolutions: file(relativePath: { eq: "smoothsolutions/echub.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       perpetua: file(relativePath: { eq: "perpetua/perpetua.png" }) {
         childImageSharp {
           fluid(quality: 100) {
@@ -107,20 +114,6 @@ const Works = () => {
         }
       }
       lcm: file(relativePath: { eq: "lcm/lcm.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      bikewatch: file(relativePath: { eq: "bike/bikewatch.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      war: file(relativePath: { eq: "war/war.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -145,6 +138,23 @@ const Works = () => {
 
         <WorkItemContainer>
           <WorkItem>
+            <Link to="/smoothsolutions">
+              <WorkImageContainer>
+                <Img fluid={data.smoothSolutions.childImageSharp.fluid} />
+              </WorkImageContainer>
+            </Link>
+            <WorkItemTitle>Smooth Solutions</WorkItemTitle>
+            <Paragraph>
+              I'm a software developer for a team digitizing and modernizing a
+              leading energy conservation non-profit company. I'm responsible
+              for the entirity of the frontend development process and codebase.
+            </Paragraph>
+            <Link to="/smoothsolutions">
+              <LinkStyle>Read about my experience</LinkStyle>
+            </Link>
+          </WorkItem>
+
+          <WorkItem>
             <Link to="/perpetua">
               <WorkImageContainer>
                 <Img fluid={data.perpetua.childImageSharp.fluid} />
@@ -161,19 +171,6 @@ const Works = () => {
           </WorkItem>
 
           <WorkItem>
-            <Link to="/marcherunner">
-              <WorkImageContainer>
-                <Img fluid={data.marcherunner.childImageSharp.fluid} />
-              </WorkImageContainer>
-            </Link>
-            <WorkItemTitle>MarchéRunner</WorkItemTitle>
-            <Paragraph>Fullstack MERN web application.</Paragraph>
-            <Link to="/marcherunner">
-              <LinkStyle>View Project</LinkStyle>
-            </Link>
-          </WorkItem>
-
-          <WorkItem>
             <Link to="/cafikmartin">
               <WorkImageContainer>
                 <Img fluid={data.lcm.childImageSharp.fluid} />
@@ -185,6 +182,22 @@ const Works = () => {
               for Orthodontic Speaker and Coach Laura Cafik-Martin.
             </Paragraph>
             <Link to="/cafikmartin">
+              <LinkStyle>View Project</LinkStyle>
+            </Link>
+          </WorkItem>
+
+          <WorkItem>
+            <Link to="/marcherunner">
+              <WorkImageContainer>
+                <Img fluid={data.marcherunner.childImageSharp.fluid} />
+              </WorkImageContainer>
+            </Link>
+            <WorkItemTitle>MarchéRunner</WorkItemTitle>
+            <Paragraph>
+              My first fullstack MERN web application to help you on your weekly
+              shopping trips and plan meals.
+            </Paragraph>
+            <Link to="/marcherunner">
               <LinkStyle>View Project</LinkStyle>
             </Link>
           </WorkItem>
@@ -205,7 +218,7 @@ const Works = () => {
             </Link>
           </WorkItem> */}
 
-          <WorkItem>
+          {/* <WorkItem>
             <Link to="/war">
               <WorkImageContainer>
                 <Img
@@ -222,7 +235,7 @@ const Works = () => {
             <Link to="/war">
               <LinkStyle>View Project</LinkStyle>
             </Link>
-          </WorkItem>
+          </WorkItem> */}
         </WorkItemContainer>
 
         <Story>
